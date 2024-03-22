@@ -1,4 +1,4 @@
-﻿//MACKFilter: An Item Filter for the Path of Diablo Mod 
+//MACKFilter: An Item Filter for the Path of Diablo Mod 
 //Filter: Advanced
 //Version: ----
 //Created by: mackanmusic
@@ -18,8 +18,8 @@
 //%BASENAME%   %FULLNAME%   %ITEMNAME%
 Attribute[Author]: mackanmusic ingame/discord/twitch
 Attribute[Name]: MackFilter
-Attribute[Version]: 4.19
-Attribute[Date]: 2024/03/08 18:33 CET
+Attribute[Version]: 4.25
+Attribute[Date]: 2024/03/22 07:00 CET
 Option[IgnoreMissingSounds]: True
 //Rename Filterlevel 
 FilterLevel[1]: Normal 
@@ -102,8 +102,16 @@ ItemDisplay[(ma10 OR ma5) MAG ID]: %BLUE%%NAME% %CORAL%T1 %WHITE%## %DGREEN% [L%
 ItemDisplay[(ma2 OR ma6 OR ma7) MAG ID]: %BLUE%%NAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>> //Forgotten Desert + Ruined Citadel + Burnt Forest
 ItemDisplay[(ma9 OR ma4 OR ma8) MAG ID]: %BLUE%%NAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>> //Dim Cellar + Musty Crypt + Desecrated Temple
 ItemDisplay[(maz OR ma1 OR ma2 OR ma3 OR ma4 OR ma5 OR ma6 OR ma7 OR ma8 OR ma9 OR ma10 OR ma11)]: %NAME% %!MAP!%<<BASICHIGH>>
-ItemDisplay[MAP !ID (RARE OR MAG)]: %WHITE%## %TAN%%NAME% T1 %WHITE%## [%RED%Unid%WHITE%]<<MAP1W>>
-ItemDisplay[MAP ID (RARE OR MAG)]: %NAME% %CORAL%T1 %WHITE%## %DGREEN% [L%ILVL%]<<MAP1W>>
+ItemDisplay[MAP !ID MAG MAPTIER=2]: %YELLOW%#### %BLUE%%NAME% T2 %YELLOW%#### %WHITE%[%RED%Unid%WHITE%]<<MAP2Y>>
+ItemDisplay[MAP !ID RARE MAPTIER=2]: %YELLOW%#### %TAN%%NAME% T2 %YELLOW%#### %WHITE%[%RED%Unid%WHITE%]<<MAP2Y>>
+ItemDisplay[MAP !ID MAG MAPTIER=3]: %RED%###### %BLUE%%NAME% T3 %RED%###### %WHITE%[%RED%Unid%WHITE%]<<MAP3R>>
+ItemDisplay[MAP !ID RARE MAPTIER=3]: %YELLOW%#### %TAN%%NAME% T3 %RED%#### %WHITE%[%RED%Unid%WHITE%]<<MAP3R>>
+ItemDisplay[MAP ID MAG MAPTIER=2]: %BLUE%%NAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>>
+ItemDisplay[MAP ID RARE MAPTIER=2]: %YELLOW%%NAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>>
+ItemDisplay[MAP ID MAG MAPTIER=3]: %BLUE%%NAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>>
+ItemDisplay[MAP ID RARE MAPTIER=3]: %RED%%NAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>>
+ItemDisplay[MAP ID (RARE OR MAG)]: %NAME% %DGREEN% [L%ILVL%]<<MAP1W>>
+ItemDisplay[MAP !ID (RARE OR MAG)]: %NAME% [%RED%Unid%WHITE%]<<MAP1W>>
 //ItemDisplay[ma0]: %NAME% %PURPLE%###%LIGHT_GRAY% [L%ILVL%]<<BASICHIGH>>
 //ItemDisplay[maa]: %NAME% %PURPLE%###%LIGHT_GRAY% [L%ILVL%]<<BASICHIGH>>
 //ItemDisplay[mab]: %NAME% %PURPLE%###%LIGHT_GRAY% [L%ILVL%]<<BASICHIGH>>
@@ -112,6 +120,7 @@ ItemDisplay[leg ILVL>60]: %ORANGE% %NAME% %WHITE%(%RED%HELL%WHITE%)<:BASIC: Noti
 ItemDisplay[leg ILVL<30]: %ORANGE% %NAME% %WHITE%(%DGREEN%NORM%WHITE%)<:BASIC: NotificationSound = "@local\sfx\common\cain\cain_stayandlisten", NotificationSoundPriority = MEDIUM>
 ItemDisplay[leg ILVL<60]: %ORANGE% %NAME% %WHITE%(%BLUE%NM%WHITE%)<:BASIC: NotificationSound = "@local\sfx\common\cain\cain_stayandlisten", NotificationSoundPriority = MEDIUM>
 //Uber Keys
+ItemDisplay[std]: %NAME%<<GG>>
 ItemDisplay[pk1]: %NL%        %ORANGE%ôô%YELLOW% Terror %WHITE%[Countess] %ORANGE%ôô        %NL%<<KEYS>>
 ItemDisplay[pk2]: %NL%        %ORANGE%ôô%YELLOW% Hate %WHITE%[Summoner] %ORANGE%ôô        %NL%<<KEYS>>
 ItemDisplay[pk3]: %NL%        %ORANGE%ôô%YELLOW% Destruction %WHITE%[Nihlathak] %ORANGE%ôô        %NL%<<KEYS>>
@@ -119,6 +128,7 @@ ItemDisplay[dhn]: %NL%        %ORANGE%ôô%YELLOW% Diablo's Horn %ORANGE%ôô   
 ItemDisplay[bey]: %NL%        %ORANGE%ôô%YELLOW% Baal's Eye %ORANGE%ôô        %NL%%GOLD%<<UBERI>>
 ItemDisplay[mbr]: %NL%        %ORANGE%ôô%YELLOW% Mephisto's Brain %ORANGE%ôô        %NL%%GOLD%<<UBERD>>
 ItemDisplay[SYNTH]: %SPACE%%NL%%NAME%%!STARS!%%NL%%SPACE%<:GG: NotificationSoundPriority = HIGH>
+ItemDisplay[SPECIAL]: %SPACE%%NL%%NAME%%!STARS!%%NL%%SPACE%<:GG: NotificationSoundPriority = HIGH>
 //Utility 
 ItemDisplay[wms CLVL<60]: %GREEN%!%WHITE%Thaw<<BASIC>>
 ItemDisplay[wms CLVL>59]:
@@ -451,17 +461,21 @@ ItemDisplay[(ob5 OR oba OR obf) NMAG SK46>2 SOCK=3]: %NAME% %PURPLE%[%SOCKETS%] 
 ItemDisplay[(ob5 OR oba OR obf) NMAG SK46>2 SOCK=0]: %NAME%   %WHITE%(%BLUE%3 Immolate%WHITE%){%ORANGE%Larzuk 3os}<<BASIC>>
 //ItemDisplay[(ob5 OR oba OR obf) NMAG SKILL("Freezing Pulse")>2 SOCK=3]: %NAME% %PURPLE%[%SOCKETS%] %WHITE%(%RED%3 Freezing Pulse%WHITE%){%PURPLE%Plague: %WHITE%Cham %SAGE%+ %LIGHT_GRAY%Fal %SAGE%+ %WHITE%Um}<<BASIC>>
 //ItemDisplay[(ob5 OR oba OR obf) NMAG SKILL("Freezing Pulse")>2 SOCK=0]: %NAME%   %WHITE%(%BLUE%3 Freezing Pulse%WHITE%){%ORANGE%Larzuk 3os}<<BASIC>>
+ItemDisplay[(ob5 OR oba OR obf) NMAG (SK52>2 AND SK62>0) SOCK=3]: %NAME% %PURPLE%[%SOCKETS%] %WHITE%(%BLUE%3 Enflame + %SKILL(62)% Hydra%WHITE%){%PURPLE%Plague: %WHITE%Cham %SAGE%+ %LIGHT_GRAY%Fal %SAGE%+ %WHITE%Um}<<BASIC>>
 ItemDisplay[(ob5 OR oba OR obf) NMAG (SK52>2 AND SK60>0) SOCK=3]: %NAME% %PURPLE%[%SOCKETS%] %WHITE%(%BLUE%3 Enflame + %SKILL(60)% Chilling%WHITE%){%PURPLE%Plague: %WHITE%Cham %SAGE%+ %LIGHT_GRAY%Fal %SAGE%+ %WHITE%Um}<<BASIC>>
 ItemDisplay[(ob5 OR oba OR obf) NMAG (SK52>2 AND SK50>0) SOCK=3]: %NAME% %PURPLE%[%SOCKETS%] %WHITE%(%BLUE%3 Enflame + %SKILL(50)% Shiver%WHITE%){%PURPLE%Plague: %WHITE%Cham %SAGE%+ %LIGHT_GRAY%Fal %SAGE%+ %WHITE%Um}<<BASIC>>
 ItemDisplay[(ob5 OR oba OR obf) NMAG SK52>2 SOCK=3]: %NAME% %PURPLE%[%SOCKETS%] %WHITE%(%BLUE%3 Enflame%WHITE%){%PURPLE%Plague: %WHITE%Cham %SAGE%+ %LIGHT_GRAY%Fal %SAGE%+ %WHITE%Um}<<BASIC>>
+ItemDisplay[(ob5 OR oba OR obf) NMAG (SK52>2 AND SK62>0) SOCK=0]: %NAME%   %WHITE%(%BLUE%3 Enflame + %SKILL(62)% Hydra%WHITE%){%ORANGE%Larzuk 3os}<<BASIC>>
 ItemDisplay[(ob5 OR oba OR obf) NMAG (SK52>2 AND SK60>0) SOCK=0]: %NAME%   %WHITE%(%BLUE%3 Enflame + %SKILL(60)% Chilling%WHITE%){%ORANGE%Larzuk 3os}<<BASIC>>
 ItemDisplay[(ob5 OR oba OR obf) NMAG (SK52>2 AND SK50>0) SOCK=0]: %NAME%   %WHITE%(%BLUE%3 Enflame + %SKILL(50)% Shiver%WHITE%){%ORANGE%Larzuk 3os}<<BASIC>>
 ItemDisplay[(ob5 OR oba OR obf) NMAG SK52>2 SOCK=0]: %NAME%   %WHITE%(%BLUE%3 Enflame%WHITE%){%ORANGE%Larzuk 3os}<<BASIC>>
 //hemo
-ItemDisplay[WP12 MAG TABSK16>2 SK477>2 SOCK=0]: %NAME% %WHITE%(%RED%6 Hemo%WHITE%) %YELLOW%[0] %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]<<BASICHIGH>>
-ItemDisplay[WP12 (MAG OR RARE) (((TABSK16>1 OR CLSK2>1) SK477>2) OR (TABSK16>2 SK477>1)) SOCK=0]: %NAME% %WHITE%(%RED%5 Hemo%WHITE%) %YELLOW%[0] %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]<<BASICHIGH>>
+ItemDisplay[WP12 MAG TABSK16>2 SK477>2 SOCK=0]: %NAME% %WHITE%(%RED%6 Hemo%WHITE%) %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]<<BASICHIGH>>
+ItemDisplay[WP12 (MAG OR RARE) (((TABSK16>1 OR CLSK2>1) SK477>2) OR (TABSK16>2 SK477>1)) SOCK=0]: %NAME% %WHITE%(%RED%5 Hemo%WHITE%) %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]<<BASICHIGH>>
 ItemDisplay[WP12 MAG TABSK16>2 SK477>2 SOCK>0]: %NAME% %WHITE%(%RED%6 Hemo%WHITE%) %YELLOW%[%SOCKETS%] %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]<<BASICHIGH>>
 ItemDisplay[WP12 (MAG OR RARE) (((TABSK16>1 OR CLSK2>1) SK477>2) OR (TABSK16>2 SK477>1)) SOCK>0]: %NAME% %WHITE%(%RED%5 Hemo%WHITE%) %YELLOW%[%SOCKETS%] %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]<<BASICHIGH>>
+ItemDisplay[CL4 MAG TABSK16>2 SK477>2 SOCK=0]: %NAME% %WHITE%(%RED%6 Hemo%WHITE%) %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]<<BASICHIGH>>
+ItemDisplay[CL4 MAG TABSK16>2 SK477>2 SOCK>0]: %NAME% %WHITE%(%RED%6 Hemo%WHITE%) %YELLOW%[%SOCKETS%] %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]<<BASICHIGH>>
 //BARB HELMS TABSK34 warcries CLSK4 barbskills SK149 Battle Orders SK154 War Cry 
 ItemDisplay[(MAG OR RARE) CL2 CLSK4>1 SK149>2 SK154>2 SOCK=0]: %NAME% %WHITE%(%RED%+5 BO +5 Warcry%WHITE%)  <<BASIC>>
 ItemDisplay[(MAG OR RARE) CL2 CLSK4>1 SK149>2 SOCK=0]: %NAME% %WHITE%(%RED%+5 BO%WHITE%)  <<BASIC>>
@@ -562,7 +576,9 @@ ItemDisplay[!ETH UNI !ID urn]: %ORANGE% Crown of Hail%NL%       %GOLD%%NAME%    
 ItemDisplay[!ETH UNI ID urn]: %BASENAME%%NL%%ORANGE%Crown of Hail %WHITE%(%PURPLE%%STAT(36,0)% PDR%WHITE%)%NL%%GOLD%%ITEMNAME% %ORANGE%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM, NotificationSound = "@global\sfx\cursor\hostile">
 ItemDisplay[ETH UNI !ID urn]: %ORANGE%ETH %GOLD%%NAME% <<BASIC>>
 //Andariel's Visage
-ItemDisplay[!ETH UNI !ID usk]: %ORANGE%Andys%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<:GG: NotificationSound = "@local\sfx\act1\kashya\kas_act1_gossip_06">
+ItemDisplay[!ETH UNI !ID usk]: %ORANGE%Bans Visage%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<:GG: NotificationSound = "@local\sfx\act1\kashya\kas_act1_gossip_06">
+ItemDisplay[!ETH UNI ID UNIQUE("Andariel's Visage") usk SOCK=0]: %BASENAME%%NL%%ORANGE% Bans Visage %NL%%GOLD%%ITEMNAME%<:GG: NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\Act5\Nihlathak\nih_act5_intro">
+ItemDisplay[!ETH UNI ID UNIQUE("Andariel's Visage") usk]: %BASENAME%%NL%%ORANGE% Bans Visage %NL%%GOLD%%ITEMNAME% %ORANGE%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\Act5\Nihlathak\nih_act5_intro">
 ItemDisplay[ETH UNI !ID usk]: %ORANGE%ETH %GOLD%%NAME% <<BASIC>>
 //Vampire Gaze
 ItemDisplay[!ETH UNI !ID xh9]: %ORANGE%Vamp Gaze%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<:GG: NotificationSound = "@global\sfx\skill\necromancer\reversevampire">
@@ -578,7 +594,7 @@ ItemDisplay[ETH UNI !ID baa]: %ORANGE%ETH %GOLD%%NAME% <<BASIC>>
 ItemDisplay[!ETH UNI !ID dra]: %ORANGE%Jalals%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
 ItemDisplay[ETH UNI !ID dra]: %ORANGE%ETH %GOLD%%NAME% <<BASIC>>
 //Ravenlore
-ItemDisplay[!ETH UNI !ID dre]: %ORANGE%Ravenlore%NL%       %GOLD%%NAME%       %GOLD%%NOTIFY(ITEM)%<<GG>>
+ItemDisplay[!ETH UNI !ID dre]: %ORANGE%Ravenlore%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
 ItemDisplay[ETH UNI !ID dre]: %ORANGE%ETH %GOLD%%NAME% <<BASIC>>
 //Steelshade
 ItemDisplay[!ETH UNI !ID ulm]: %ORANGE%Steelshade%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<<GG>>
@@ -731,15 +747,17 @@ ItemDisplay[!ETH SET !ID xtb]: %ORANGE%Aldurs Boots%NL%%GREEN%%NAME%%NL%%!STARS2
 //Natalya's
 ItemDisplay[!ETH SET !ID xh9]: %ORANGE%Nats Helm%NL%%GREEN%%NAME% <:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
 ItemDisplay[!ETH SET ID SET("Natalya's Totem") SOCK=0]: %WHITE%(%CORAL%Up before slam%WHITE%)%NL%%GREEN%%NAME% {%PURPLE%Upgrade: %ORANGE%Hel %SAGE%+ %ORANGE%Io %SAGE%+ %YELLOW%PTopaz}<:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID 7qr]: %ORANGE%Nats Claw%NL%       %GREEN%%NAME%       %GOLD%<:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
+ItemDisplay[!ETH SET !ID 7qr]: %ORANGE%Flys Nat Claws%NL%       %GREEN%%NAME%       %GOLD%<:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
+ItemDisplay[!ETH SET ID SET("Natalya's Mark") 7qr SOCK=0]: %BASENAME%%NL%%ORANGE% Flys Nat Claws %NL%%GREEN%%ITEMNAME%<:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
+ItemDisplay[!ETH SET ID SET("Natalya's Mark") 7qr SOCK>0]: %BASENAME%%NL%%ORANGE% Flys Nat Claws %NL%%GREEN%%ITEMNAME% %ORANGE%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
 ItemDisplay[!ETH SET !ID xmb]: %ORANGE%Nats Boots%NL%%GREEN%%NAME% <:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
 ItemDisplay[!ETH SET !ID ucl]: %ORANGE%Nats Armor%NL%%GREEN%%NAME% <:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
 //Tal Rasha 
 ItemDisplay[!ETH SET !ID uth]: %ORANGE%Corp Tal Russia Armor%NL%%GREEN%%NAME%%NL%%!STARS2!% <:GG: NotificationColor = GREEN>
 ItemDisplay[!ETH SET ID uth SOCK>0]: %BASENAME%%NL%%ORANGE% Corp Tal Russia Armor %NL%%GREEN%%ITEMNAME% %ORANGE%[%SOCKETS%]<:GG: NotificationColor = GREEN>
 ItemDisplay[!ETH SET ID uth SOCK=0]: %BASENAME%%NL%%ORANGE% Corp Tal Russia Armor %NL%%GREEN%%ITEMNAME% <:GG: NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID oba !FILTERLVL=2]: %ORANGE%Tal Weap%NL%%NAME% <:GG: NotificationPriority = LOW, NotificationColor = GREEN>
-ItemDisplay[!ETH SET !ID zmb !FILTERLVL=2]: %ORANGE%Tal Belt%NL%%NAME% <:GG: NotificationPriority = LOW, NotificationColor = GREEN>
+ItemDisplay[!ETH SET !ID oba !FILTERLVL=2]: %ORANGE%Tal Weap%NL%%GREEN%%NAME% <:GG: NotificationPriority = LOW, NotificationColor = GREEN>
+ItemDisplay[!ETH SET !ID zmb !FILTERLVL=2]: %ORANGE%Tal Belt%NL%%GREEN%%NAME% <:GG: NotificationPriority = LOW, NotificationColor = GREEN>
 ItemDisplay[!ETH SET !ID xsk ]: %ORANGE%KG Rasha Helm%NL%%GREEN%%NAME% <:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
 ItemDisplay[!ETH SET("Tal Rasha's Horadric Crest") ID xsk SOCK>0]: %BASENAME% %NL%%ORANGE% KG Rasha Helm %NL% %GREEN%%ITEMNAME% %ORANGE%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
 ItemDisplay[!ETH SET("Tal Rasha's Horadric Crest") ID xsk SOCK=0]: %BASENAME% %NL%%ORANGE% KG Rasha Helm %NL% %GREEN%%ITEMNAME% <:GG: NotificationPriority = MEDIUM, NotificationColor = GREEN>
@@ -775,12 +793,14 @@ ItemDisplay[!ETH UNI ID UNIQUE("Ondal's Wisdom")]: %GOLD%%BASENAME%%NL%%WHITE%(%
 ItemDisplay[ETH UNI ID UNIQUE("Ondal's Wisdom") SOCK=0]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%WHITE%(%ORANGE%+%PURPLE%%STAT(127,0)%Skills%WHITE%)%NL%%GOLD%%ITEMNAME% <:GG: NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\act5\monster\baallaugh1">
 ItemDisplay[ETH UNI ID UNIQUE("Ondal's Wisdom")]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%WHITE%(%ORANGE%+%PURPLE%%STAT(127,0)%Skills%WHITE%)%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\act5\monster\baallaugh1">
 //Death Fathom
-ItemDisplay[!ETH UNI !ID obf]: %ORANGE%Deaths Fathom%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<:GG: NotificationSound = "@local\sfx\act4\diablo\diablotaunt1">
-ItemDisplay[ETH UNI !ID obf]: %ORANGE%ETH %GOLD%%NAME% %ORANGE% Deaths Fathom <:GG: NotificationSound = "@local\sfx\act4\diablo\diablotaunt1">
-ItemDisplay[!ETH UNI ID UNIQUE("Death's Fathom") SOCK=0]: %WHITE%(%ORANGE%+%BLUE%%STAT(331,0)%Cold%WHITE%)%NL%%GOLD%%NAME% <:GG: NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\act4\diablo\diablotaunt1">
-ItemDisplay[ETH UNI ID UNIQUE("Death's Fathom") SOCK=0]: %WHITE%(%ORANGE%+%BLUE%%STAT(331,0)%Cold%WHITE%)%NL%%ORANGE%ETH %GOLD%%NAME% <:GG: NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\act4\diablo\diablotaunt1">
-ItemDisplay[!ETH UNI ID UNIQUE("Death's Fathom")]: %WHITE%(%ORANGE%+%BLUE%%STAT(331,0)%Cold%WHITE%)%NL%%GOLD%%NAME%  %GREEN%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\act4\diablo\diablotaunt1">
-ItemDisplay[ETH UNI ID UNIQUE("Death's Fathom")]: %WHITE%(%ORANGE%+%BLUE%%STAT(331,0)%Cold%WHITE%)%NL%%ORANGE%ETH %GOLD%%NAME%  %GREEN%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\act4\diablo\diablotaunt1">
+%GOLD%%BASENAME%%NL%%ORANGE%KG Fathom%NL%%ORANGE%ETH %GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]
+
+ItemDisplay[!ETH UNI !ID obf]: %ORANGE%KG Fathom%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<:GG: NotificationSound = "@local\sfx\act4\diablo\diablotaunt1">
+ItemDisplay[ETH UNI !ID obf]: %ORANGE%ETH %GOLD%%NAME% %ORANGE% KG Fathom <:GG: NotificationSound = "@local\sfx\act4\diablo\diablotaunt1">
+ItemDisplay[!ETH UNI ID UNIQUE("Death's Fathom") SOCK=0]: %GOLD%%BASENAME%%NL%%ORANGE%KG Fathom%NL%%GOLD%%ITEMNAME% <:GG: NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\act4\diablo\diablotaunt1">
+ItemDisplay[ETH UNI ID UNIQUE("Death's Fathom") SOCK=0]: %GOLD%%BASENAME%%NL%%ORANGE%KG Fathom%NL%%ORANGE%ETH %GOLD%%ITEMNAME% <:GG: NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\act4\diablo\diablotaunt1">
+ItemDisplay[!ETH UNI ID UNIQUE("Death's Fathom")]: %GOLD%%BASENAME%%NL%%ORANGE%KG Fathom%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\act4\diablo\diablotaunt1">
+ItemDisplay[ETH UNI ID UNIQUE("Death's Fathom")]: %GOLD%%BASENAME%%NL%%ORANGE%KG Fathom%NL%%ORANGE%ETH %GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\act4\diablo\diablotaunt1">
 //Death's Web dweb
 ItemDisplay[!ETH UNI !ID 7gw]: %ORANGE%Deaths Web%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<:GG: NotificationSound = "@local\sfx\act5\monster\baaltaunt">
 ItemDisplay[ETH UNI !ID 7gw]: %ORANGE%ETH %GOLD%%NAME% %ORANGE% Deaths Web <:GG: NotificationSound = "@local\sfx\act5\monster\baaltaunt">
@@ -873,11 +893,11 @@ ItemDisplay[UNI !ETH !ID 9gw !FILTERLVL=2]: %ORANGE%Blackhand Key%NL%%GOLD%%NAME
 ItemDisplay[UNI !ETH !ID 9bs]: %ORANGE%Headstriker%NL%       %GOLD%%NAME%       %GOLD%<<GG>>
 ItemDisplay[UNI ETH !ID 9bs]: %ORANGE%ETH %GOLD%%NAME% %ORANGE%Headstriker<<GG>>
 //Bing Sz Wang
-ItemDisplay[UNI !ETH !ID 9cm]: %ORANGE%Bans Big Size Wang%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<:GG: NotificationPriority = MEDIUM, NotificationSound = "@global\sfx\object\glassbreak1">
-ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID 9cm SOCK=0]: %BASENAME%%NL%%ORANGE% Bans Big Size Wang %NL%%GOLD%%ITEMNAME%{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<:GG: NotificationPriority = MEDIUM, NotificationSound = "@global\sfx\object\glassbreak1">
-ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID 9cm]: %BASENAME%%NL%%ORANGE% Bans Big Size Wang %NL%%GOLD%%ITEMNAME% %ORANGE%[%SOCKETS%]{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<:GG: NotificationPriority = MEDIUM, NotificationSound = "@global\sfx\object\glassbreak1">
-ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID SOCK=0]: %BASENAME%%NL%%ORANGE% Bans Big Size Wang %NL%%GOLD%%ITEMNAME%<:GG: NotificationPriority = MEDIUM, NotificationSound = "@global\sfx\object\glassbreak1">
-ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID]: %BASENAME%%NL%%ORANGE% Bans Big Size Wang %NL%%GOLD%%ITEMNAME% %ORANGE%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM, NotificationSound = "@global\sfx\object\glassbreak1">
+ItemDisplay[UNI !ETH !ID 9cm]: %ORANGE%Big Size Wang%NL%       %GOLD%%NAME%       %NL%%!STARS2!%<:GG: NotificationPriority = MEDIUM, NotificationSound = "@global\sfx\object\glassbreak1">
+ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID 9cm SOCK=0]: %BASENAME%%NL%%ORANGE% Big Size Wang %NL%%GOLD%%ITEMNAME%{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<:GG: NotificationPriority = MEDIUM, NotificationSound = "@global\sfx\object\glassbreak1">
+ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID 9cm]: %BASENAME%%NL%%ORANGE% Big Size Wang %NL%%GOLD%%ITEMNAME% %ORANGE%[%SOCKETS%]{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald}<:GG: NotificationPriority = MEDIUM, NotificationSound = "@global\sfx\object\glassbreak1">
+ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID SOCK=0]: %BASENAME%%NL%%ORANGE% Big Size Wang %NL%%GOLD%%ITEMNAME%<:GG: NotificationPriority = MEDIUM, NotificationSound = "@global\sfx\object\glassbreak1">
+ItemDisplay[UNI !ETH UNIQUE("Bing Sz Wang") ID]: %BASENAME%%NL%%ORANGE% Big Size Wang %NL%%GOLD%%ITEMNAME% %ORANGE%[%SOCKETS%]<:GG: NotificationPriority = MEDIUM, NotificationSound = "@global\sfx\object\glassbreak1">
 //Mang songs
 ItemDisplay[UNI !ETH !ID 6ws]: %ORANGE%Mang Song's%NL%       %GOLD%%NAME%        %GOLD%<:GG: NotificationSound = "@global\sfx\cursor\questdone">
 ItemDisplay[UNI ETH !ID 6ws]: %ORANGE%Mang Song's%NL%       %ORANGE%ETH %GOLD%%NAME%       %GOLD%<:GG: NotificationSound = "@global\sfx\cursor\questdone">
@@ -902,8 +922,8 @@ ItemDisplay[UNIQUE("Astreon's Iron Ward") !ETH ID SOCK>0]: %GOLD%%BASENAME%%NL%%
 ItemDisplay[UNIQUE("Astreon's Iron Ward") ETH ID SOCK>0]: %ORANGE%ETH %GOLD%%BASENAME%%NL%%ORANGE%Tverts Astreon%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%] <:GG: NotificationPriority = MEDIUM, NotificationSound = "@local\sfx\Act5\Qual-Kehk\qua_act5_intro_pal">
 //Cranebeak   
 ItemDisplay[UNI !ETH !ID 7mp !FILTERLVL=2]: %ORANGE%Cranebeak %RED%MF%NL%%GOLD%%NAME%<:GG: NotificationPriority = LOW>
-ItemDisplay[UNIQUE("Cranebeak") !ETH ID SOCK=0]: %BASENAME%%NL%%WHITE%(%BLUE%%STAT(80,0)% MF%WHITE%)%NL%%ITEMBASE% <:GG: NotificationPriority = LOW>
-ItemDisplay[UNIQUE("Cranebeak") !ETH ID SOCK>0]: %BASENAME%%NL%%WHITE%(%BLUE%%STAT(80,0)% MF%WHITE%)%NL%%ITEMBASE% %GREEN%[%SOCKETS%]<:GG: NotificationPriority = LOW>
+ItemDisplay[UNIQUE("Cranebeak") !ETH ID SOCK=0]: %BASENAME%%NL%%WHITE%(%BLUE%%STAT(80,0)% MF%WHITE%)%NL%%GOLD%%ITEMNAME% <:GG: NotificationPriority = LOW>
+ItemDisplay[UNIQUE("Cranebeak") !ETH ID SOCK>0]: %BASENAME%%NL%%WHITE%(%BLUE%%STAT(80,0)% MF%WHITE%)%NL%%GOLD%%ITEMNAME% %GREEN%[%SOCKETS%]<:GG: NotificationPriority = LOW>
 //Wizard Spike
 ItemDisplay[UNI !ETH !ID 7dg]: %ORANGE%Khiars Wiz Spike%NL%%GOLD%%NAME%<:GG: NotificationPriority = MEDIUM>
 ItemDisplay[UNI ETH !ID 7dg]: %ORANGE%Khiars Wiz Spike%NL%%ORANGE%ETH %GOLD%%NAME% <:GG: NotificationPriority = MEDIUM>
@@ -1019,7 +1039,7 @@ ItemDisplay[NMAG EQ3 !RW (SOCK=2 OR SOCK=3) CLVL>60]:
 ItemDisplay[NMAG EQ2 !RW SOCK=1 CLVL>40]:
 ItemDisplay[NMAG EQ1 !RW SOCK=1 CLVL>30]:
 //3/20 java / 3 bo buff weaps for shoping
-ItemDisplay[!RW MAG !amu TABSK34>2]: %NAME% %WHITE%(%PURPLE%3 WARCRY STICK%WHITE%) {%PURPLE%3 WARCRY STICK} <<BASICHIGH>>
+ItemDisplay[!RW MAG !amu TABSK34>2]: %NAME% %WHITE%(%PURPLE%3 WARCRY STICK%WHITE%) {%PURPLE%3 WARCRY STICK} <<BASICLOW>>
 ItemDisplay[MAG EQ4 !ETH ID TABSK2>2 IAS=20]: %NAME% %WHITE%(%PURPLE%J%YELLOW%A%GREEN%V%RED%A GLOVES%WHITE%) {%RED%3\20 %WHITE%JAVA} <<BASICHIGH>>
 ItemDisplay[MAG EQ4 !ETH ID TABSK0>2 IAS=20]: %NAME% %WHITE%(%ORANGE%BOWA GLOVES%WHITE%) {%ORANGE%3\20 %YELLOW%BOWA} <<BASICHIGH>>
 ItemDisplay[MAG EQ4 !ETH ID TABSK50>2 IAS=20]: %NAME% %WHITE%(%ORANGE%MA GLOVES%WHITE%) {%ORANGE%3\20 %YELLOW%MA} <<BASICHIGH>>
@@ -1318,17 +1338,17 @@ ItemDisplay[MAG CL5 ((TABSK48>1 AND SK277>2) OR (TABSK48>2 AND SK277>1))]: %NAME
 ItemDisplay[MAG CL5 ((TABSK48>1 AND SK277>1) OR (TABSK48>0 AND SK277>2) OR (TABSK48>2 AND SK277>0))]: %NAME% %WHITE%(%ORANGE%+4 BS%WHITE%) %YELLOW%[%SOCKETS%]<<BASIC>>
 ItemDisplay[MAG CL5 TABSK48>2]: %NAME% %WHITE%(%DGREEN%+3 Trap%WHITE%) %YELLOW%[%SOCKETS%]<<BASIC>>
 //chageskill claws Fists of fire blades of ice claws of thunder
-ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) SKILL("Fists of Fire")>2 !SOCK=1 !SOCK=2]: %RED% +%SKILL(259)% FoF%CONTINUE%
-ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) SKILL("Blades of Ice")>2 !SOCK=1 !SOCK=2]: %BLUE% +%SKILL(274)% BoI%CONTINUE%
-ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) SKILL("Claws of Thunder")>2 !SOCK=1 !SOCK=2]: %YELLOW% +%SKILL(269)% CoT%CONTINUE%
-ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Blades of Ice")>2 OR SKILL("Fists of Fire")>2) SKILL("Claws of Thunder")<2 !SOCK=1 !SOCK=2]: %YELLOW% +%SKILL(269)% CoT%CONTINUE%
-ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Blades of Ice")>2 OR SKILL("Claws of Thunder")>2) SKILL("Fists of Fire")<2 !SOCK=1 !SOCK=2]: %RED% +%SKILL(259)% FoF%CONTINUE%
-ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Claws of Thunder")>2 OR SKILL("Fists of Fire")>2) SKILL("Blades of Ice")<2 !SOCK=1 !SOCK=2]: %BLUE% +%SKILL(274)% BoI%CONTINUE%
-ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Claws of Thunder")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Blades of Ice")>2) SKILL("Burst of Speed")>0 !SOCK=1 !SOCK=2]: %LIGHT_GRAY%+%SKILL(258)% BoS%CONTINUE%
-ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Claws of Thunder")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Blades of Ice")>2) SKILL("Fade")>0 !SOCK=1 !SOCK=2]: %LIGHT_GRAY%+%SKILL(267)% Fade%CONTINUE%
-ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Claws of Thunder")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Blades of Ice")>2) SKILL("Weapon Block")>0 !SOCK=1 !SOCK=2]: %LIGHT_GRAY%+%SKILL(263)% C Block%CONTINUE%
-ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Claws of Thunder")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Blades of Ice")>2) SKILL("Blade Shield")>0 !SOCK=1 !SOCK=2]: %LIGHT_GRAY%+%SKILL(277)% BS%CONTINUE%
-ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Claws of Thunder")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Blades of Ice")>2) SKILL("Dragon Flight")>0 !SOCK=1 !SOCK=2]: %LIGHT_GRAY%+%SKILL(275)% D flight%CONTINUE%
+ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) SKILL("Fists of Fire")>2 !SOCK=1 !SOCK=2]: %NAME%%RED% +%SKILL(259)% FoF%CONTINUE%
+ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) SKILL("Blades of Ice")>2 !SOCK=1 !SOCK=2]: %NAME%%BLUE% +%SKILL(274)% BoI%CONTINUE%
+ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) SKILL("Claws of Thunder")>2 !SOCK=1 !SOCK=2]: %NAME%%YELLOW% +%SKILL(269)% CoT%CONTINUE%
+ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Blades of Ice")>2 OR SKILL("Fists of Fire")>2) SKILL("Claws of Thunder")<3 SKILL("Claws of Thunder")>0 !SOCK=1 !SOCK=2]: %NAME%%YELLOW% +%SKILL(269)% CoT%CONTINUE%
+ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Blades of Ice")>2 OR SKILL("Claws of Thunder")>2) SKILL("Fists of Fire")<3 SKILL("Fists of Fire")>0 !SOCK=1 !SOCK=2]: %NAME%%RED% +%SKILL(259)% FoF%CONTINUE%
+ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Claws of Thunder")>2 OR SKILL("Fists of Fire")>2) SKILL("Blades of Ice")<3 SKILL("Blades of Ice")>0 !SOCK=1 !SOCK=2]: %NAME%%BLUE% +%SKILL(274)% BoI%CONTINUE%
+ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Claws of Thunder")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Blades of Ice")>2) SKILL("Burst of Speed")>0 !SOCK=1 !SOCK=2]: %NAME%%LIGHT_GRAY% +%SKILL(258)% BoS%CONTINUE%
+ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Claws of Thunder")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Blades of Ice")>2) SKILL("Fade")>0 !SOCK=1 !SOCK=2]: %NAME%%LIGHT_GRAY% +%SKILL(267)% Fade%CONTINUE%
+ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Claws of Thunder")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Blades of Ice")>2) SKILL("Weapon Block")>0 !SOCK=1 !SOCK=2]: %NAME%%LIGHT_GRAY% +%SKILL(263)% C Block%CONTINUE%
+ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Claws of Thunder")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Blades of Ice")>2) SKILL("Blade Shield")>0 !SOCK=1 !SOCK=2]: %NAME%%LIGHT_GRAY% +%SKILL(277)% BS%CONTINUE%
+ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Claws of Thunder")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Blades of Ice")>2) SKILL("Dragon Flight")>0 !SOCK=1 !SOCK=2]: %NAME%%LIGHT_GRAY% +%SKILL(275)% D flight%CONTINUE%
 ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Claws of Thunder")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Blades of Ice")>2) SOCK=3]: %NAME% %YELLOW%[%SOCKETS%]%CONTINUE%
 ItemDisplay[NMAG (9lw OR 9tw OR 7tw OR 7lw OR 7wb) (SKILL("Claws of Thunder")>2 OR SKILL("Fists of Fire")>2 OR SKILL("Blades of Ice")>2) !SOCK=1 !SOCK=2]: %NAME%%NL%%WHITE%%BASENAME% {%PURPLE%Mosaic: %WHITE%Mal %SAGE%+ %LIGHT_GRAY%Gul %SAGE%+ %WHITE%Amn}<<GG>>
 //Blade Shield, Venom | wof/inferno bases claws
@@ -1499,15 +1519,16 @@ ItemDisplay[CL4 NMAG SK84>2 !SOCK=1]: %DGREEN%%NAME% %ORANGE%[%SOCKETS%] %WHITE%
 ItemDisplay[CL4 NMAG SK84>0 !SOCK=1 CLVL<40]: %DGREEN%%NAME% %GRAY%[%SOCKETS%] %WHITE%(%ORANGE%%SKILL(84)% Bonespear%WHITE%) %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]{%PURPLE%Splendor: %WHITE%Eth %SAGE%+ %LIGHT_GRAY%Lum%NL%%PURPLE%Rhyme: %WHITE%Shael %SAGE%+ %LIGHT_GRAY%Eth}<<BASIC>>
 ItemDisplay[CL4 NMAG SK73>2 !SOCK=1 !FILTERLVL=2]: %DGREEN%%NAME%  %RED%[%SOCKETS%] %WHITE%(%ORANGE%+3 Deadly Psn%WHITE%) %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]{%PURPLE%Splendor: %WHITE%Eth %SAGE%+ %LIGHT_GRAY%Lum%NL%%PURPLE%Rhyme: %WHITE%Shael %SAGE%+ %LIGHT_GRAY%Eth}<<BASIC>>
 //non-magic druid pelt bases for Metamorphosis
-ItemDisplay[NMAG CL1 SKILL("Rabies")>2 !SOCK=1 !SOCK=2]: %DGREEN% +%SKILL(238)% Rabies%CONTINUE%
-ItemDisplay[NMAG CL1 SKILL("Summon Grizzly")>2 !SOCK=1 !SOCK=2]: %RED% +%SKILL(247)% Bear%CONTINUE%
-ItemDisplay[NMAG CL1 (SKILL("Summon Grizzly")>2 OR SKILL("Rabies")>2) SKILL("Oak Sage")>0 !SOCK=1 !SOCK=2]: %ORANGE% +%SKILL(226)% OAK%CONTINUE%
-ItemDisplay[NMAG CL1 (SKILL("Summon Grizzly")>2 OR SKILL("Rabies")>2) SKILL("Heart of Wolverine")>0 !SOCK=1 !SOCK=2]: %RED% +%SKILL(236)% HoW%CONTINUE%
-ItemDisplay[NMAG CL1 (SKILL("Summon Grizzly")>2 OR SKILL("Rabies")>2) SKILL("Lycanthropy")>0 !SOCK=1 !SOCK=2]: %RED% +%SKILL(224)% Lycan%CONTINUE%
-ItemDisplay[NMAG CL1 SKILL("Summon Grizzly")>2 SKILL("Maul")>0 !SOCK=1 !SOCK=2]: %YELLOW% +%SKILL(233)% Maul%CONTINUE%
-ItemDisplay[NMAG CL1 SKILL("Rabies")>2 SKILL("Fury")>0 !SOCK=1 !SOCK=2]: %YELLOW% +%SKILL(248)% Fury%CONTINUE%
-ItemDisplay[NMAG CL1 (SKILL("Summon Grizzly")>2 OR SKILL("Rabies")>2) SOCK=3]: %NAME% %YELLOW%[%SOCKETS%]%CONTINUE%
-ItemDisplay[NMAG CL1 (SKILL("Summon Grizzly")>2 OR SKILL("Rabies")>2) !SOCK=1 !SOCK=2]: %NAME%%NL%%WHITE%%BASENAME%{%PURPLE%Metamorphosis: %WHITE%Io %SAGE%+ %LIGHT_GRAY%Cham %SAGE%+ %WHITE%Fal}<<GG>>
+ItemDisplay[NMAG CL1 SKILL("Fire Claws")>2 !SOCK=1 !SOCK=2]: %NAME%%RED% +%SKILL(239)% Fire Claw%CONTINUE%
+ItemDisplay[NMAG CL1 SKILL("Rabies")>2 !SOCK=1 !SOCK=2]: %NAME%%DGREEN% +%SKILL(238)% Rabies%CONTINUE%
+ItemDisplay[NMAG CL1 SKILL("Summon Grizzly")>2 !SOCK=1 !SOCK=2]: %NAME%%RED% +%SKILL(247)% Bear%CONTINUE%
+ItemDisplay[NMAG CL1 (SKILL("Summon Grizzly")>2 OR SKILL("Rabies")>2 OR SKILL("Fire Claws")>2) SKILL("Oak Sage")>0 !SOCK=1 !SOCK=2]: %NAME%%ORANGE% +%SKILL(226)% OAK%CONTINUE%
+ItemDisplay[NMAG CL1 (SKILL("Summon Grizzly")>2 OR SKILL("Rabies")>2 OR SKILL("Fire Claws")>2) SKILL("Heart of Wolverine")>0 !SOCK=1 !SOCK=2]: %NAME%%RED% +%SKILL(236)% HoW%CONTINUE%
+ItemDisplay[NMAG CL1 (SKILL("Summon Grizzly")>2 OR SKILL("Rabies")>2 OR SKILL("Fire Claws")>2) SKILL("Lycanthropy")>0 !SOCK=1 !SOCK=2]: %NAME%%RED% +%SKILL(224)% Lycan%CONTINUE%
+ItemDisplay[NMAG CL1 SKILL("Summon Grizzly")>2 SKILL("Maul")>0 !SOCK=1 !SOCK=2]: %NAME%%YELLOW% +%SKILL(233)% Maul%CONTINUE%
+ItemDisplay[NMAG CL1 SKILL("Rabies")>2 SKILL("Fury")>0 !SOCK=1 !SOCK=2]: %NAME%%YELLOW% +%SKILL(248)% Fury%CONTINUE%
+ItemDisplay[NMAG CL1 (SKILL("Summon Grizzly")>2 OR SKILL("Rabies")>2 OR SKILL("Fire Claws")>2) SOCK=3]: %NAME% %YELLOW%[%SOCKETS%]%CONTINUE%
+ItemDisplay[NMAG CL1 (SKILL("Summon Grizzly")>2 OR SKILL("Rabies")>2 OR SKILL("Fire Claws")>2) !SOCK=1 !SOCK=2]: %NAME%%NL%%WHITE%%BASENAME%{%PURPLE%Metamorphosis: %WHITE%Io %SAGE%+ %LIGHT_GRAY%Cham %SAGE%+ %WHITE%Fal}<<GG>>
 //non-magic druid pelts 
 ItemDisplay[CL1 NMAG SK226>2 SOCK=0]: %DGREEN%3 OAK %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]<<BASIC1>>
 ItemDisplay[CL1 NMAG SK226>0 SOCK=0 CLVL<71]: %DGREEN%%SKILL(226)% OAK %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]<<BASIC>>
