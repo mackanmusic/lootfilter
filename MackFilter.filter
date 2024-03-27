@@ -18,8 +18,8 @@
 //%BASENAME%   %FULLNAME%   %ITEMNAME%
 Attribute[Author]: mackanmusic ingame/discord/twitch
 Attribute[Name]: MackFilter
-Attribute[Version]: 4.28
-Attribute[Date]: 2024/03/27 05:47 CET
+Attribute[Version]: 4.29
+Attribute[Date]: 2024/03/27 06:47 CET
 Option[IgnoreMissingSounds]: True
 //Rename Filterlevel 
 FilterLevel[1]: Normal 
@@ -127,7 +127,12 @@ ItemDisplay[pk3]: %NL%        %ORANGE%ôô%YELLOW% Destruction %WHITE%[Nihlathak
 ItemDisplay[dhn]: %NL%        %ORANGE%ôô%YELLOW% Diablo's Horn %ORANGE%ôô        %NL%%GOLD%<<UBERL>>
 ItemDisplay[bey]: %NL%        %ORANGE%ôô%YELLOW% Baal's Eye %ORANGE%ôô        %NL%%GOLD%<<UBERI>>
 ItemDisplay[mbr]: %NL%        %ORANGE%ôô%YELLOW% Mephisto's Brain %ORANGE%ôô        %NL%%GOLD%<<UBERD>>
-ItemDisplay[SYNTH]: %SPACE%%NL%%NAME%%!STARS!%%NL%%SPACE%<:GG: NotificationSoundPriority = HIGH>
+ItemDisplay[SYNTH]: %NAME% %CONTINUE%
+ItemDisplay[SYNTH ETH]: %ORANGE%ETH %GOLD%%NAME% %CONTINUE%
+ItemDisplay[SYNTH NORM WEAPON]: %NAME%{%PURPLE%Upgrade: %WHITE%Ral %SAGE%+ %LIGHT_GRAY%Sol %SAGE%+ %GREEN%PEmerald} %CONTINUE%
+ItemDisplay[SYNTH EXC WEAPON]: %NAME%{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald} %CONTINUE%
+ItemDisplay[SYNTH SOCK>0]: %NAME% %GREEN%[%SOCKETS%]%CONTINUE%
+ItemDisplay[SYNTH]: %SPACE%%NL%%NAME%%!STARS!%%NL%%SPACE%<:GG: NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\cursor\hostile">
 ItemDisplay[SPECIAL]: %SPACE%%NL%%NAME%%!STARS!%%NL%%SPACE%<:GG: NotificationSoundPriority = HIGH>
 //Utility 
 ItemDisplay[wms CLVL<60]: %GREEN%!%WHITE%Thaw<<BASIC>>
@@ -1577,6 +1582,7 @@ ItemDisplay[!RW NMAG (ELT OR NORM) WP9 SOCK=4 FILTERLVL=2]:
 ItemDisplay[!RW NMAG (ELT OR NORM) WP9 SOCK=4]: %DGREEN%%NAME% %WHITE%(%ORANGE%%SOCKETS%%WHITE%)<<BASIC>>
 //Assassin Leveling
 //Magic claws, Rare claws
+ItemDisplay[!RW (MAG OR RARE) CL5 CLVL<60]: %NAME%
 ItemDisplay[!RW (MAG OR RARE) CL5]:
 //Leveling - Generic
 ItemDisplay[RARE ILVL<15]: %NAME%<<BASIC>>
