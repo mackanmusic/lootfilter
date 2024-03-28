@@ -18,8 +18,8 @@
 //%BASENAME%   %FULLNAME%   %ITEMNAME%
 Attribute[Author]: mackanmusic ingame/discord/twitch
 Attribute[Name]: MackFilter
-Attribute[Version]: 4.32
-Attribute[Date]: 2024/03/28 15:37 CET
+Attribute[Version]: 4.33
+Attribute[Date]: 2024/03/28 23:30 CET
 Option[IgnoreMissingSounds]: True
 //Rename Filterlevel 
 FilterLevel[1]: Normal 
@@ -108,8 +108,8 @@ ItemDisplay[MAP !ID MAG MAPTIER=3]: %RED%###### %BLUE%%NAME% T3 %RED%###### %WHI
 ItemDisplay[MAP !ID RARE MAPTIER=3]: %YELLOW%#### %TAN%%NAME% T3 %RED%#### %WHITE%[%RED%Unid%WHITE%]<<MAP3R>>
 ItemDisplay[MAP ID MAG MAPTIER=2]: %BLUE%%NAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>>
 ItemDisplay[MAP ID RARE MAPTIER=2]: %YELLOW%%NAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>>
-ItemDisplay[MAP ID MAG MAPTIER=3]: "Baleful Alcazar Relic"]: %RED%Jailful Alcatraz Relic %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Baleful Alcazar Relic%NL%%ORANGE%Gulag}<<MAP3R>>
-ItemDisplay[MAP ID RARE MAPTIER=3]: "Baleful Alcazar Relic"]: %RED%Jailful Alcatraz Relic %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Baleful Alcazar Relic%NL%%ORANGE%Gulag}<<MAP3R>>
+ItemDisplay[MAP ID MAG MAPTIER=3 "Baleful Alcazar Relic"]: %RED%Jailful Alcatraz Relic %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Baleful Alcazar Relic%NL%%ORANGE%Gulag}<<MAP3R>>
+ItemDisplay[MAP ID RARE MAPTIER=3 "Baleful Alcazar Relic"]: %RED%Jailful Alcatraz Relic %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Baleful Alcazar Relic%NL%%ORANGE%Gulag}<<MAP3R>>
 ItemDisplay[MAP ID RARE MAPTIER=3]: %RED%%NAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>>
 ItemDisplay[MAP ID MAG MAPTIER=3]: %BLUE%%NAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>>
 ItemDisplay[MAP ID (RARE OR MAG)]: %NAME% %DGREEN% [L%ILVL%]<<MAP1W>>
