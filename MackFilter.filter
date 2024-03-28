@@ -18,8 +18,8 @@
 //%BASENAME%   %FULLNAME%   %ITEMNAME%
 Attribute[Author]: mackanmusic ingame/discord/twitch
 Attribute[Name]: MackFilter
-Attribute[Version]: 4.29
-Attribute[Date]: 2024/03/27 06:47 CET
+Attribute[Version]: 4.30
+Attribute[Date]: 2024/03/28 01:02 CET
 Option[IgnoreMissingSounds]: True
 //Rename Filterlevel 
 FilterLevel[1]: Normal 
@@ -158,6 +158,7 @@ ItemDisplay[aq2 RARE ILVL>60]: %NL%%NAME% %GREEN%**<<BASIC>>
 ItemDisplay[aq2 UNI ILVL>60]: %NAME%<<BASIC>>
 ItemDisplay[aq2 SET ILVL>60]: %NAME%<<BASIC>>
 ItemDisplay[cq2 MAG ILVL>60]:
+ItemDisplay[cq2 RARE FILTERLVL=2]:
 ItemDisplay[cq2 RARE ILVL>60]: %NAME%<<BASIC>>
 ItemDisplay[cq2 UNI ILVL>60]: %NAME%<<BASIC>>
 ItemDisplay[cq2 SET ILVL>60]: %NAME%<<BASIC>>
@@ -1288,6 +1289,8 @@ ItemDisplay[(uui OR uea OR ula OR utu OR ung OR ucl OR uhn OR urs OR upl OR ult 
 //Elite Armor Non Eth
 ItemDisplay[(uui OR uea OR ula OR utu OR ung OR ucl OR uhn OR urs OR upl OR ult OR uld OR uth OR uul OR uar OR utp) !ETH NMAG]:
 //0 soc 2soc 3soc Mage Plate/Light Plate
+ItemDisplay[xtp NMAG !ETH FILTERLVL=2]:
+ItemDisplay[xtp NMAG !ETH SOCK=2 ILVL>85]: %DGREEN%%NAME% %GRAY%[%SOCKETS%] 
 ItemDisplay[xtp NMAG !ETH SOCK=0]: %DGREEN% %NAME% {%ORANGE%Larzuk 3os%NL%%PURPLE%Roll: %WHITE%Tal %SAGE%+ %LIGHT_GRAY%Thul %SAGE%+ %YELLOW%PTopaz}<<BASIC>>
 ItemDisplay[xtp NMAG !ETH SOCK=3]: %DGREEN%%NAME% %GRAY%[%SOCKETS%] {%PURPLE%Enigma: %WHITE%Jah %SAGE%+ %LIGHT_GRAY%Ith %SAGE%+ %WHITE%Ber%NL%%PURPLE%Dragon: %WHITE%Sur %SAGE%+ %LIGHT_GRAY%Lo %SAGE%+ %WHITE%Sol}<<BASIC>>
 ItemDisplay[(xtp OR ltp) NMAG (SOCK=1 OR ETH)]:
@@ -1298,6 +1301,7 @@ ItemDisplay[uit SUP !ETH NMAG STAT91<0 SOCK=0]: %DGREEN% %NAME% %WHITE%(%ORANGE%
 ItemDisplay[uit !SUP !ETH NMAG CLVL<81 SOCK=0]: %DGREEN%%NAME% %PURPLE%*%ORANGE%*%GREEN%*%GOLD%*%YELLOW%*%PURPLE%*{%PURPLE%Roll: %WHITE%Tal %SAGE%+ %LIGHT_GRAY%Amn %SAGE%+ %RED%PRuby}<<BASICHIGH>>
 ItemDisplay[uit !ETH NMAG CLVL<81 SOCK=4]: %DGREEN%%NAME% %YELLOW%[%SOCKETS%] %PURPLE%*%ORANGE%*%GREEN%*%GOLD%*%YELLOW%*%PURPLE%*{%PURPLE%Spirit: %WHITE%Tal %SAGE%+ %LIGHT_GRAY%Thul %SAGE%+ %WHITE%Ort %SAGE%+ %LIGHT_GRAY%Amn%NL%%PURPLE%Phoenix: %WHITE%Vex %SAGE%+ %LIGHT_GRAY%Vex %SAGE%+ %WHITE%Lo %SAGE%+ %LIGHT_GRAY%Jah}<<BASICHIGH>>
 ItemDisplay[uit SUP !ETH NMAG CLVL<81 SOCK=0]: %DGREEN%%NAME% %PURPLE%*%ORANGE%*%GREEN%*%GOLD%*%YELLOW%*%PURPLE%*{%ORANGE%Larzuk 4os}<<BASICHIGH>>
+ItemDisplay[uit NMAG FILTERLVL=2]:
 ItemDisplay[uit !SUP !ETH NMAG SOCK=0]: %DGREEN%%NAME% {%PURPLE%Roll: %WHITE%Tal %SAGE%+ %LIGHT_GRAY%Amn %SAGE%+ %RED%PRuby}<<BASIC>>
 ItemDisplay[uit !ETH NMAG SOCK=4]: %DGREEN%%NAME% %YELLOW%[%SOCKETS%]{%PURPLE%Spirit: %WHITE%Tal %SAGE%+ %LIGHT_GRAY%Thul %SAGE%+ %WHITE%Ort %SAGE%+ %LIGHT_GRAY%Amn%NL%%PURPLE%Phoenix: %WHITE%Vex %SAGE%+ %LIGHT_GRAY%Vex %SAGE%+ %WHITE%Lo %SAGE%+ %LIGHT_GRAY%Jah}<<BASIC>>
 ItemDisplay[uit SUP !ETH NMAG SOCK=0]: %DGREEN%%NAME% {%ORANGE%Larzuk 4os}<<BASIC>>
@@ -1679,6 +1683,7 @@ ItemDisplay[ELT MAG EQ6 !ID ILVL>65]:
 ItemDisplay[MAG (lbl OR zlb OR ulc OR vbl OR mbl OR tbl OR ztb OR utc OR hbl OR zhb OR uhc) !ID ILVL>65]:
 //Normal
 //Vendor Items
+ItemDisplay[NMAG WEAPON ILVL>85]:
 ItemDisplay[NMAG WP11 ILVL>85 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0 OR SK60>0 OR SK61>0 OR SK62>0 OR SK63>0 OR SK64>0 OR SK65>0)]:
 ItemDisplay[NMAG PRICE>34999 ILVL>85 (ob1 OR ob6 OR obb OR obc OR ob7 OR ob2 OR ob3 OR ob8 OR obd) (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0 OR SK60>0 OR SK61>0 OR SK62>0 OR SK63>0 OR SK64>0 OR SK65>0)]: %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]<<BASIC>>
 ItemDisplay[NMAG PRICE>34999 ILVL>85 ((ob1 OR ob2 OR ob3 OR ob4 OR ob5 OR ob6 OR ob7 OR ob8 OR ob9 OR oba OR obb OR obc OR obd OR obe OR obf) OR WP11) (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0 OR SK60>0 OR SK61>0 OR SK62>0 OR SK63>0 OR SK64>0 OR SK65>0)]:
@@ -1742,10 +1747,12 @@ ItemDisplay[NMAG !RW ILVL>14 !SOCK=4 6cb]:
 //Helms
 //Dream Delirium
 //Low Str 3SOC Masks (NON ETH)
-ItemDisplay[NMAG SOCK=3 !ETH (msk OR xsk)]: %DGREEN%%NAME% %YELLOW%[%SOCKETS%]<<BASIC>>
+ItemDisplay[NMAG SOCK=3 !ETH (msk OR xsk) ILVL<86]: %DGREEN%%NAME% %YELLOW%[%SOCKETS%]<<BASIC>>
 //103-106 str helms for archon plate builds
-ItemDisplay[NMAG SOCK=0 !ETH (usk OR uh9 OR ci2 OR ci3)]: %DGREEN%%NAME%  <<BASIC>>
-ItemDisplay[NMAG SOCK=3 !ETH (usk OR uh9 OR ci2 OR ci3)]: %DGREEN%%NAME% %WHITE%[%SOCKETS%]<<BASIC>>
+ItemDisplay[NMAG SOCK=0 !ETH (usk OR uh9 OR ci2 OR ci3) ILVL<86]: %DGREEN%%NAME%<<BASIC>>
+ItemDisplay[NMAG SOCK=0 !ETH (usk OR uh9 OR ci2 OR ci3)]:
+ItemDisplay[NMAG SOCK=3 !ETH (usk OR uh9 OR ci2 OR ci3) ILVL<86]: %DGREEN%%NAME% %WHITE%[%SOCKETS%]<<BASIC>>
+ItemDisplay[NMAG SOCK=3 !ETH (usk OR uh9 OR ci2 OR ci3 OR msk OR xsk)]:
 //Low STR LORE base - ILVL appropriate
 ItemDisplay[NMAG SOCK=2 !ETH (cap OR skp OR hlm) ILVL<20]: %NAME% %YELLOW%[%SOCKETS%]<<BASIC>>
 ItemDisplay[NMAG SOCK=2 !ETH (msk OR bhm OR xap OR xkp OR xsk OR xh9) ILVL<45]: %NAME% %DGREEN%[%SOCKETS%]<<BASIC>>
