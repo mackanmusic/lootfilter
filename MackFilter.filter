@@ -18,7 +18,7 @@
 //%BASENAME%   %FULLNAME%   %ITEMNAME%
 Attribute[Author]: mackanmusic ingame/discord/twitch
 Attribute[Name]: MackFilter
-Attribute[Version]: 4.30
+Attribute[Version]: 4.31
 Attribute[Date]: 2024/03/28 01:02 CET
 Option[IgnoreMissingSounds]: True
 //Rename Filterlevel 
@@ -1260,6 +1260,7 @@ ItemDisplay[RARE !ETH (amu OR rin OR jew) !ID]: %NL%       %YELLOW%%NAME% %PURPL
 ItemDisplay[RARE ETH (ci0 OR ci1 OR ci2 OR ci3 OR amu OR rin OR jew) !ID]: %ORANGE%ETH %YELLOW%%NAME%<<BASIC>>
 ItemDisplay[RARE !ETH (ci0 OR ci1) ID]: %NAME% %WHITE%(%CORAL%Up before slam%WHITE%) {%PURPLE%Upgrade: %WHITE%Ral %SAGE%+ %LIGHT_GRAY%Thul %SAGE%+ %PURPLE%PAmethyst}<<BASIC>>
 ItemDisplay[MAG !ETH 7cr ID FOOLS IAS>39 SOCK=0]: %NAME% %WHITE%(%ORANGE%FOOL'S %WHITE%, %ORANGE%40 IAS%WHITE%)%PURPLE%*%ORANGE%*%GREEN%*%GOLD%*%YELLOW%*%PURPLE%*{%SAGE%-----------------------%NL%%ORANGE%Message %BOLD%*mackanmusic %NL% %GREEN% BUYING %BOLD%Clean%WHITE% \ %RED%6os%NL%%SAGE%-----------------------}<<BASICHIGH1>>
+ItemDisplay[MAG !ETH 7cr ID TABSK24>2 IAS>39 SOCK=0]: %NAME% %WHITE%(%ORANGE%Off Aura %WHITE%, %ORANGE%40 IAS%WHITE%)%PURPLE%*%ORANGE%*%GREEN%*%GOLD%*%YELLOW%*%PURPLE%*{%SAGE%-----------------------%NL%%ORANGE%Message %BOLD%*mackanmusic %NL% %GREEN% BUYING %BOLD%Clean%WHITE% \ %RED%6os%NL%%SAGE%-----------------------}<<BASICHIGH1>>
 ItemDisplay[MAG !ETH 7cr ID FOOLS IAS>39 SOCK>4]: %NAME% %PURPLE%[%SOCKETS%] %WHITE%(%ORANGE%FOOL'S %WHITE%, %ORANGE%40 IAS%WHITE%)%PURPLE%*%ORANGE%*%GREEN%*%GOLD%*%YELLOW%*%PURPLE%*{%SAGE%-----------------------%NL%%ORANGE%Message %BOLD%*mackanmusic %NL% %GREEN% BUYING %NL%%SAGE%-----------------------}<<BASICHIGH1>>
 //BASES
 //Armor
