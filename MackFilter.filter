@@ -18,8 +18,8 @@
 //%BASENAME%   %FULLNAME%   %ITEMNAME%
 Attribute[Author]: mackanmusic ingame/discord/twitch
 Attribute[Name]: MackFilter
-Attribute[Version]: 4.31
-Attribute[Date]: 2024/03/28 01:02 CET
+Attribute[Version]: 4.32
+Attribute[Date]: 2024/03/28 15:37 CET
 Option[IgnoreMissingSounds]: True
 //Rename Filterlevel 
 FilterLevel[1]: Normal 
@@ -108,8 +108,10 @@ ItemDisplay[MAP !ID MAG MAPTIER=3]: %RED%###### %BLUE%%NAME% T3 %RED%###### %WHI
 ItemDisplay[MAP !ID RARE MAPTIER=3]: %YELLOW%#### %TAN%%NAME% T3 %RED%#### %WHITE%[%RED%Unid%WHITE%]<<MAP3R>>
 ItemDisplay[MAP ID MAG MAPTIER=2]: %BLUE%%NAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>>
 ItemDisplay[MAP ID RARE MAPTIER=2]: %YELLOW%%NAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>>
-ItemDisplay[MAP ID MAG MAPTIER=3]: %BLUE%%NAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>>
+ItemDisplay[MAP ID MAG MAPTIER=3]: "Baleful Alcazar Relic"]: %RED%Jailful Alcatraz Relic %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Baleful Alcazar Relic%NL%%ORANGE%Gulag}<<MAP3R>>
+ItemDisplay[MAP ID RARE MAPTIER=3]: "Baleful Alcazar Relic"]: %RED%Jailful Alcatraz Relic %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Baleful Alcazar Relic%NL%%ORANGE%Gulag}<<MAP3R>>
 ItemDisplay[MAP ID RARE MAPTIER=3]: %RED%%NAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>>
+ItemDisplay[MAP ID MAG MAPTIER=3]: %BLUE%%NAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>>
 ItemDisplay[MAP ID (RARE OR MAG)]: %NAME% %DGREEN% [L%ILVL%]<<MAP1W>>
 ItemDisplay[MAP !ID (RARE OR MAG)]: %NAME% [%RED%Unid%WHITE%]<<MAP1W>>
 //ItemDisplay[ma0]: %NAME% %PURPLE%###%LIGHT_GRAY% [L%ILVL%]<<BASICHIGH>>
@@ -1619,7 +1621,7 @@ ItemDisplay[ILVL<66 ELT RARE (ARMOR OR WEAPON)]: %NAME%<<BASIC>>
 //RARES
 //Best Rares (crystalsword, dimensional blade, phase blade, Circlets, Amulets, Rings, Gloves, Boots, Belts, Jewels)
 ItemDisplay[RARE EQ6 !ID]:
-ItemDisplay[(MAG OR RARE) FILTERLVL=2]:
+ItemDisplay[(MAG OR RARE) !ID FILTERLVL=2]:
 ItemDisplay[RARE EQ5 !ID]: %YELLOW%%NAME%<<BASIC>>
 //Class Specific Rares (Druid Pelts, Barb Helms, Paladin Shields, Necro Heads, Assassin Claws, Sorc Orbs, Amazon Bow/Jav
 ItemDisplay[RARE (CL1 OR CL2) !ID FILTERLVL=2]:
@@ -1816,12 +1818,10 @@ ItemDisplay[ETH SOCK=0]: %ORANGE%ETH %NAME%<<BASIC>>
 ItemDisplay[SOCK>0]: %NAME% [%SOCKETS%]<<BASIC>>
 //ItemDisplay[tsc]: %GREEN%!%WHITE%TP
 ItemDisplay[tsc CLVL<41]: %GREEN%!%WHITE%TP<<BASIC>>
-ItemDisplay[tsc CLVL>40 FILTERLVL=2]:
 ItemDisplay[tsc CLVL>40 TPSCROLLS<5]: %BLUE%!%BLACK%TP<<BASIC>>
 ItemDisplay[tsc CLVL>40 TPSCROLLS>4]:
 //ItemDisplay[isc]: %GREEN%!%WHITE%ID
 ItemDisplay[isc CLVL<41]: %GREEN%!%WHITE%ID<<BASIC>>
-ItemDisplay[isc CLVL>40 FILTERLVL=2]:
 ItemDisplay[isc CLVL>40 IDSCROLLS<5]: %GREEN%!%BLACK%ID<<BASIC>>
 ItemDisplay[isc CLVL>40 IDSCROLLS>4]:
 
