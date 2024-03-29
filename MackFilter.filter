@@ -18,8 +18,8 @@
 //%BASENAME%   %FULLNAME%   %ITEMNAME%
 Attribute[Author]: mackanmusic ingame/discord/twitch
 Attribute[Name]: MackFilter
-Attribute[Version]: 4.33
-Attribute[Date]: 2024/03/28 23:30 CET
+Attribute[Version]: 4.34
+Attribute[Date]: 2024/03/29 04:23 CET
 Option[IgnoreMissingSounds]: True
 //Rename Filterlevel 
 FilterLevel[1]: Normal 
@@ -1434,8 +1434,8 @@ ItemDisplay[NMAG ETH 7fb SOCK=0]: %ORANGE%ETH %DGREEN%%NAME% {%ORANGE%Larzuk 5os
 ItemDisplay[NMAG ETH 7gd SOCK=6]: %ORANGE%ETH %DGREEN%%NAME% %ORANGE%[%SOCKETS%]{%PURPLE%Silence: %WHITE%Dol %SAGE%+ %LIGHT_GRAY%Eld %SAGE%+ %WHITE%Hel %SAGE%+ %LIGHT_GRAY%Ist %SAGE%+ %WHITE%Tir %SAGE%+ %LIGHT_GRAY%Vex}<<BASIC>>
 ItemDisplay[NMAG ETH 7gd SOCK=5]: %ORANGE%ETH %DGREEN%%NAME% %ORANGE%[%SOCKETS%]{%PURPLE%Death: %WHITE%Hel %SAGE%+ %LIGHT_GRAY%El %SAGE%+ %WHITE%Vex %SAGE%+ %LIGHT_GRAY%Ort %SAGE%+ %WHITE%Gul}<<BASIC>>
 ItemDisplay[NMAG ETH 7gd SOCK=0]: %ORANGE%ETH %DGREEN%%NAME% {%ORANGE%Larzuk 6os}<<BASIC>>
-ItemDisplay[NMAG !ETH 7gd ED>14 SOCK=0]: %DGREEN%%NAME% {%SAGE%-----------------------%NL%%ORANGE%Message %BOLD%*Rokejo %NL% %GREEN% BUYING %NL%%SAGE%-----------------------%NL%%ORANGE%Larzuk 6os}<<BASIC>>
-ItemDisplay[NMAG !ETH 7gd ED>14 SOCK=6]: %DGREEN%%NAME% %ORANGE%[%SOCKETS%]{%SAGE%-----------------------%NL%%ORANGE%Message %BOLD%*Rokejo %NL% %GREEN% BUYING %NL%%SAGE%-----------------------%NL%%PURPLE%Last Wish: %WHITE%Jah %SAGE%+ %LIGHT_GRAY%Mal %SAGE%+ %WHITE%Jah %SAGE%+ %LIGHT_GRAY%Sur %SAGE%+ %WHITE%Jah %SAGE%+ %LIGHT_GRAY%Ber}<<GG>>
+ItemDisplay[NMAG !ETH 7gd ED>14 SOCK=0]: %DGREEN%%NAME% %PURPLE%Roke{%SAGE%-----------------------%NL%%ORANGE%Message %BOLD%*Rokejo %NL% %GREEN% BUYING %NL%%SAGE%-----------------------%NL%%ORANGE%Larzuk 6os}<<BASIC>>
+ItemDisplay[NMAG !ETH 7gd ED>14 SOCK=6]: %DGREEN%%NAME% %PURPLE%Roke %ORANGE%[%SOCKETS%]{%SAGE%-----------------------%NL%%ORANGE%Message %BOLD%*Rokejo %NL% %GREEN% BUYING %NL%%SAGE%-----------------------%NL%%PURPLE%Last Wish: %WHITE%Jah %SAGE%+ %LIGHT_GRAY%Mal %SAGE%+ %WHITE%Jah %SAGE%+ %LIGHT_GRAY%Sur %SAGE%+ %WHITE%Jah %SAGE%+ %LIGHT_GRAY%Ber}<<GG>>
 //4os ETH Archon Staff = INSIGHT / MEMORY BASE //  ENERGY SHIELD 
 ItemDisplay[WP11 NMAG SOCK=4 (SK58>2 AND SK50>0)]: %DGREEN%%NAME% %PURPLE%[%SOCKETS%] %WHITE%(%BLUE%3 ES + SHIVER%WHITE%){%PURPLE%Memory: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Io %SAGE%+ %WHITE%Sol %SAGE%+ %LIGHT_GRAY%Eth}<<BASIC1>>
 ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs) NMAG SOCK=0 (SK58>2 AND SK50>0)]: %DGREEN%%NAME% %WHITE%(%BLUE%3 ES + SHIVER%WHITE%)<<BASIC1>>
