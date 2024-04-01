@@ -18,8 +18,8 @@
 //%BASENAME%   %FULLNAME%   %ITEMNAME%
 Attribute[Author]: mackanmusic ingame/discord/twitch
 Attribute[Name]: MackFilter
-Attribute[Version]: 4.36
-Attribute[Date]: 2024/04/01 06:09 CEST
+Attribute[Version]: 4.38
+Attribute[Date]: 2024/04/01 23:39 CEST
 Option[IgnoreMissingSounds]: True
 //Rename Filterlevel 
 FilterLevel[1]: Normal 
@@ -134,8 +134,8 @@ ItemDisplay[SYNTH ETH]: %ORANGE%ETH %GOLD%%NAME% %CONTINUE%
 ItemDisplay[SYNTH NORM WEAPON]: %NAME%{%PURPLE%Upgrade: %WHITE%Ral %SAGE%+ %LIGHT_GRAY%Sol %SAGE%+ %GREEN%PEmerald} %CONTINUE%
 ItemDisplay[SYNTH EXC WEAPON]: %NAME%{%PURPLE%Upgrade: %WHITE%Lum %SAGE%+ %LIGHT_GRAY%Pul %SAGE%+ %GREEN%PEmerald} %CONTINUE%
 ItemDisplay[SYNTH SOCK>0]: %NAME% %GREEN%[%SOCKETS%]%CONTINUE%
-ItemDisplay[SYNTH]: %SPACE%%NL%%NAME%%!STARS!%%NL%%SPACE%<:GG: NotificationSoundPriority = HIGH, NotificationSound = "@global\sfx\cursor\hostile">
-ItemDisplay[SPECIAL]: %SPACE%%NL%%NAME%%!STARS!%%NL%%SPACE%<:GG: NotificationSoundPriority = HIGH>
+ItemDisplay[SYNTH]: %SPACE%%NL%%NAME%%!STARS!%%NL%%SPACE%<:GG: NotificationSoundPriority = MEDIUM, NotificationSound = "@global\sfx\cursor\hostile">
+ItemDisplay[SPECIAL]: %SPACE%%NL%%NAME%%!STARS!%%NL%%SPACE%<:GG: NotificationSoundPriority = MEDIUM>
 //Utility 
 ItemDisplay[wms CLVL<60]: %GREEN%!%WHITE%Thaw<<BASIC>>
 ItemDisplay[wms CLVL>59]:
@@ -449,7 +449,7 @@ ItemDisplay[SET CLVL<40 !ETH tow]:  %GREEN%Sigon shield %ORANGE%(+1skill) %RED%(
 //Sigon gloves
 ItemDisplay[SET CLVL<40 !ETH hgl]:  %GREEN%Sigon gloves %ORANGE%(20AR, 10STR) %RED%(2piece 30IAS) <<GG>>
 //Vidala
-ItemDisplay[SET !ETH tbt]:  %NAME% %ORANGE% Mood boots <:GG: NotificationPriority = LOW>
+ItemDisplay[SET !ETH tbt !FILTERLVL=2]:  %NAME% %ORANGE% Mood boots <:GG: NotificationPriority = LOW>
 //SHOPING
 //charges items
 ItemDisplay[MAG !ETH WP11 CHSK53>0]: %WHITE%(%PURPLE%TELE %ORANGE%Charges%WHITE%) %WHITE%[%YELLOW%%PRICE% %GOLD%$%WHITE%]%NL% %BLUE%%NAME% <<BASICLOW>>
@@ -1271,8 +1271,8 @@ ItemDisplay[RW (pa1 OR pa2 OR pa3 OR pa4 OR pa5 OR pa6 OR pa7 OR pa8 OR pa9 OR p
 ItemDisplay[RW ETH]: %ORANGE%ETH %GRAY%%BASENAME%%NL%%GOLD%%ITEMNAME% %PURPLE%**<<BASICHIGH>>
 ItemDisplay[RW]: %GRAY%%BASENAME%%NL%%GOLD%%ITEMNAME% %PURPLE%** <<BASICHIGH>>
 //Best Rares (crystalsword, dimensional blade, phase blade, Circlets, Amulets, Rings, Gloves, Boots, Belts, Jewels)
-ItemDisplay[NMAG !ETH 7gd ED>14 SOCK=0]: %DGREEN%%NAME% %PURPLE%Roke{%SAGE%-----------------------%NL%%ORANGE%Message %BOLD%*Rokejo %NL% %GREEN% BUYING %NL%%SAGE%-----------------------%NL%%ORANGE%Larzuk 6os}<<BASIC>>
-ItemDisplay[NMAG !ETH 7gd ED>14 SOCK=6]: %DGREEN%%NAME% %PURPLE%Roke %ORANGE%[%SOCKETS%]{%SAGE%-----------------------%NL%%ORANGE%Message %BOLD%*Rokejo %NL% %GREEN% BUYING %NL%%SAGE%-----------------------%NL%%PURPLE%Last Wish: %WHITE%Jah %SAGE%+ %LIGHT_GRAY%Mal %SAGE%+ %WHITE%Jah %SAGE%+ %LIGHT_GRAY%Sur %SAGE%+ %WHITE%Jah %SAGE%+ %LIGHT_GRAY%Ber}<<GG>>
+ItemDisplay[NMAG !ETH 7gd ED>9 SOCK=0]: %DGREEN%%NAME% %PURPLE%Roke{%SAGE%-----------------------%NL%%ORANGE%Message %BOLD%*Rokejo %NL% %GREEN% BUYING %NL%%SAGE%-----------------------%NL%%ORANGE%Larzuk 6os}<<BASIC>>
+ItemDisplay[NMAG !ETH 7gd ED>9 SOCK=6]: %DGREEN%%NAME% %PURPLE%Roke %ORANGE%[%SOCKETS%]{%SAGE%-----------------------%NL%%ORANGE%Message %BOLD%*Rokejo %NL% %GREEN% BUYING %NL%%SAGE%-----------------------%NL%%PURPLE%Last Wish: %WHITE%Jah %SAGE%+ %LIGHT_GRAY%Mal %SAGE%+ %WHITE%Jah %SAGE%+ %LIGHT_GRAY%Sur %SAGE%+ %WHITE%Jah %SAGE%+ %LIGHT_GRAY%Ber}<<GG>>
 ItemDisplay[RARE !ETH 7cr !ID]: %NL%       %YELLOW%Phase Blade %PURPLE%*%ORANGE%*%GREEN%*%GOLD%*%YELLOW%*%PURPLE%*<<BASICHIGH1>>
 ItemDisplay[RARE !ETH 9cr !ID]: %NL%       %YELLOW%Dimensional Blade %PURPLE%*%ORANGE%*%GREEN%*%GOLD%*%YELLOW%*%PURPLE%*<<BASICHIGH1>>
 ItemDisplay[RARE !ETH crs !ID]: %NL%       %YELLOW%Crystal Sword %PURPLE%*%ORANGE%*%GREEN%*%GOLD%*%YELLOW%*%PURPLE%*<<BASICHIGH1>>
