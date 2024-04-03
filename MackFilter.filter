@@ -18,8 +18,8 @@
 //%BASENAME%   %FULLNAME%   %ITEMNAME%
 Attribute[Author]: mackanmusic ingame/discord/twitch
 Attribute[Name]: MackFilter
-Attribute[Version]: 4.38
-Attribute[Date]: 2024/04/01 23:39 CEST
+Attribute[Version]: 4.39
+Attribute[Date]: 2024/04/03 09:35 CEST
 Option[IgnoreMissingSounds]: True
 //Rename Filterlevel 
 FilterLevel[1]: Normal 
@@ -154,6 +154,8 @@ ItemDisplay[gpl CLVL<15]: %GREEN%!%WHITE%Strangling Gas <<BASIC>>
 ItemDisplay[vps CLVL<26]: %GREEN%!%WHITE%Stamina<<BASIC>>
 ItemDisplay[(gpm OR gpl OR vps) CLVL>25]: 
 //Hide MAGIC Quivers & Bolts above level 60 / Unique arrows NEW
+ItemDisplay[UNI !ID aq2]: %NAME% %GREEN%*
+ItemDisplay[UNI ID aq2 UNIQUE("Moonfire")]: %NAME% %GREEN%*{%YELLOW%MSG *lolznaga OR *bigmekk90%NL%%TEAL%Need clean\1 skill corrupt}
 ItemDisplay[UNI !ID (aq2 OR cq2)]:
 ItemDisplay[aq2 MAG ILVL>20]:
 ItemDisplay[aq2 RARE ILVL>60]: %NL%%NAME% %GREEN%**<<BASIC>>
@@ -1271,8 +1273,6 @@ ItemDisplay[RW (pa1 OR pa2 OR pa3 OR pa4 OR pa5 OR pa6 OR pa7 OR pa8 OR pa9 OR p
 ItemDisplay[RW ETH]: %ORANGE%ETH %GRAY%%BASENAME%%NL%%GOLD%%ITEMNAME% %PURPLE%**<<BASICHIGH>>
 ItemDisplay[RW]: %GRAY%%BASENAME%%NL%%GOLD%%ITEMNAME% %PURPLE%** <<BASICHIGH>>
 //Best Rares (crystalsword, dimensional blade, phase blade, Circlets, Amulets, Rings, Gloves, Boots, Belts, Jewels)
-ItemDisplay[NMAG !ETH 7gd ED>9 SOCK=0]: %DGREEN%%NAME% %PURPLE%Roke{%SAGE%-----------------------%NL%%ORANGE%Message %BOLD%*Rokejo %NL% %GREEN% BUYING %NL%%SAGE%-----------------------%NL%%ORANGE%Larzuk 6os}<<BASIC>>
-ItemDisplay[NMAG !ETH 7gd ED>9 SOCK=6]: %DGREEN%%NAME% %PURPLE%Roke %ORANGE%[%SOCKETS%]{%SAGE%-----------------------%NL%%ORANGE%Message %BOLD%*Rokejo %NL% %GREEN% BUYING %NL%%SAGE%-----------------------%NL%%PURPLE%Last Wish: %WHITE%Jah %SAGE%+ %LIGHT_GRAY%Mal %SAGE%+ %WHITE%Jah %SAGE%+ %LIGHT_GRAY%Sur %SAGE%+ %WHITE%Jah %SAGE%+ %LIGHT_GRAY%Ber}<<GG>>
 ItemDisplay[RARE !ETH 7cr !ID]: %NL%       %YELLOW%Phase Blade %PURPLE%*%ORANGE%*%GREEN%*%GOLD%*%YELLOW%*%PURPLE%*<<BASICHIGH1>>
 ItemDisplay[RARE !ETH 9cr !ID]: %NL%       %YELLOW%Dimensional Blade %PURPLE%*%ORANGE%*%GREEN%*%GOLD%*%YELLOW%*%PURPLE%*<<BASICHIGH1>>
 ItemDisplay[RARE !ETH crs !ID]: %NL%       %YELLOW%Crystal Sword %PURPLE%*%ORANGE%*%GREEN%*%GOLD%*%YELLOW%*%PURPLE%*<<BASICHIGH1>>
