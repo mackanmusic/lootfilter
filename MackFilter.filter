@@ -18,8 +18,8 @@
 //%BASENAME%   %FULLNAME%   %ITEMNAME%
 Attribute[Author]: mackanmusic ingame/discord/twitch
 Attribute[Name]: MackFilter
-Attribute[Version]: 4.41
-Attribute[Date]: 2024/04/16 03:52 CEST
+Attribute[Version]: 4.42
+Attribute[Date]: 2024/09/09 18:25 CEST
 Option[IgnoreMissingSounds]: True
 //Rename Filterlevel 
 FilterLevel[1]: Normal 
@@ -89,25 +89,26 @@ ItemDisplay[cx5]: %NL%%GREEN%ôô %PURPLE%Orb %ORANGE%of %PURPLE%Corruption %GRE
 ItemDisplay[cx6]: %PURPLE%##%ORANGE%%NAME%%PURPLE%##<<BASICHIGH1>>
 ItemDisplay[cx7]: %PURPLE%##%ORANGE%%NAME%%PURPLE%##<<BASICHIGH1>>
 ItemDisplay[cx8]: %PURPLE%Orb %ORANGE%of %PURPLE%Enchantment<<BASICNOT>>
-ItemDisplay[(ma10 OR ma5) RARE !ID]: %WHITE%## %TAN%%NAME% T1 %WHITE%## [%RED%Unid%WHITE%]<<MAP1W>> //Icy Cavern or Pleasant Pastures + Frigid Plateau
-ItemDisplay[(ma2 OR ma6 OR ma7) RARE !ID]: %RED%###### %TAN%%NAME% T3 %RED%###### %WHITE%[%RED%Unid%WHITE%]<<MAP3R>> //Forgotten Desert + Ruined Citadel + Burnt Forest
-ItemDisplay[(ma9 OR ma4 OR ma8) RARE !ID]: %YELLOW%#### %TAN%%NAME% T2 %YELLOW%#### %WHITE%[%RED%Unid%WHITE%]<<MAP2Y>> //Dim Cellar + Musty Crypt + Desecrated Temple
+ItemDisplay[cx9]: %PURPLE%##%ORANGE%%NAME%%PURPLE%##<<BASICHIGH1>>
+ItemDisplay[(ma10 OR ma5) RARE !ID]: %WHITE%## %TAN%%NAME% T1 %WHITE%## [%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP1W>> //Icy Cavern or Pleasant Pastures + Frigid Plateau
+ItemDisplay[(ma2 OR ma6 OR ma7) RARE !ID]: %RED%###### %TAN%%NAME% T3 %RED%###### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP3R>> //Forgotten Desert + Ruined Citadel + Burnt Forest
+ItemDisplay[(ma9 OR ma4 OR ma8) RARE !ID]: %YELLOW%#### %TAN%%NAME% T2 %YELLOW%#### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP2Y>> //Dim Cellar + Musty Crypt + Desecrated Temple
 ItemDisplay[(ma10 OR ma5) RARE ID]: %WHITE%%NAME% %CORAL%T1 %WHITE%## %DGREEN% [L%ILVL%]<<MAP1W>> //Icy Cavern + Frigid Plateau
 ItemDisplay[ma7 RARE ID]: %RED%Burnt Pizza%NL%%TAN%%ITEMNAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>> //Burnt Forest
 ItemDisplay[(ma2 OR ma6) RARE ID]: %RED%%NAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>> //Forgotten Desert + Ruined Citadel
 ItemDisplay[ma8 RARE ID]: %YELLOW%Musty Beauty%NL%%ITEMNAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>> //Musty Crypt
 ItemDisplay[(ma9 OR ma4) RARE ID]: %YELLOW%%NAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>> //Dim Cellar + Desecrated Temple
-ItemDisplay[(ma10 OR ma5) MAG !ID]: %WHITE%## %BLUE%%NAME% T1 %WHITE%## [%RED%Unid%WHITE%]<<MAP1W>> //Icy Cavern or Pleasant Pastures + Frigid Plateau
-ItemDisplay[(ma2 OR ma6 OR ma7) MAG !ID]: %RED%###### %BLUE%%NAME% T3 %RED%###### %WHITE%[%RED%Unid%WHITE%]<<MAP3R>> //Forgotten Desert + Ruined Citadel + Burnt Forest
-ItemDisplay[(ma9 OR ma4 OR ma8) MAG !ID]: %YELLOW%#### %BLUE%%NAME% T2 %YELLOW%#### %WHITE%[%RED%Unid%WHITE%]<<MAP2Y>> //Dim Cellar + Musty Crypt + Desecrated Temple
+ItemDisplay[(ma10 OR ma5) MAG !ID]: %WHITE%## %BLUE%%NAME% T1 %WHITE%## [%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP1W>> //Icy Cavern or Pleasant Pastures + Frigid Plateau
+ItemDisplay[(ma2 OR ma6 OR ma7) MAG !ID]: %RED%###### %BLUE%%NAME% T3 %RED%###### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP3R>> //Forgotten Desert + Ruined Citadel + Burnt Forest
+ItemDisplay[(ma9 OR ma4 OR ma8) MAG !ID]: %YELLOW%#### %BLUE%%NAME% T2 %YELLOW%#### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP2Y>> //Dim Cellar + Musty Crypt + Desecrated Temple
 ItemDisplay[(ma10 OR ma5) MAG ID]: %BLUE%%NAME% %CORAL%T1 %WHITE%## %DGREEN% [L%ILVL%]<<MAP1W>> //Icy Cavern or Pleasant Pastures + Frigid Plateau
 ItemDisplay[(ma2 OR ma6 OR ma7) MAG ID]: %BLUE%%NAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>> //Forgotten Desert + Ruined Citadel + Burnt Forest
 ItemDisplay[(ma9 OR ma4 OR ma8) MAG ID]: %BLUE%%NAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>> //Dim Cellar + Musty Crypt + Desecrated Temple
 ItemDisplay[(maz OR ma1 OR ma2 OR ma3 OR ma4 OR ma5 OR ma6 OR ma7 OR ma8 OR ma9 OR ma10 OR ma11)]: %NAME% %!MAP!%<<BASICHIGH>>
-ItemDisplay[MAP !ID MAG MAPTIER=2]: %YELLOW%#### %BLUE%%NAME% T2 %YELLOW%#### %WHITE%[%RED%Unid%WHITE%]<<MAP2Y>>
-ItemDisplay[MAP !ID RARE MAPTIER=2]: %YELLOW%#### %TAN%%NAME% T2 %YELLOW%#### %WHITE%[%RED%Unid%WHITE%]<<MAP2Y>>
-ItemDisplay[MAP !ID MAG MAPTIER=3]: %RED%###### %BLUE%%NAME% T3 %RED%###### %WHITE%[%RED%Unid%WHITE%]<<MAP3R>>
-ItemDisplay[MAP !ID RARE MAPTIER=3]: %YELLOW%#### %TAN%%NAME% T3 %RED%#### %WHITE%[%RED%Unid%WHITE%]<<MAP3R>>
+ItemDisplay[MAP !ID MAG MAPTIER=2]: %YELLOW%#### %BLUE%%NAME% T2 %YELLOW%#### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP2Y>>
+ItemDisplay[MAP !ID RARE MAPTIER=2]: %YELLOW%#### %TAN%%NAME% T2 %YELLOW%#### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP2Y>>
+ItemDisplay[MAP !ID MAG MAPTIER=3]: %RED%###### %BLUE%%NAME% T3 %RED%###### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP3R>>
+ItemDisplay[MAP !ID RARE MAPTIER=3]: %YELLOW%#### %TAN%%NAME% T3 %RED%#### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP3R>>
 ItemDisplay[MAP ID MAG MAPTIER=2]: %BLUE%%NAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>>
 ItemDisplay[MAP ID RARE MAPTIER=2]: %YELLOW%%NAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>>
 ItemDisplay[MAP ID MAG MAPTIER=3 "Baleful Alcazar Relic"]: %RED%Jailful Alcatraz Relic%NL%%BLUE%%ITEMNAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Baleful Alcazar Relic%NL%%ORANGE%Gulag}<<MAP3R>>
@@ -115,7 +116,7 @@ ItemDisplay[MAP ID RARE MAPTIER=3 "Baleful Alcazar Relic"]: %RED%Jailful Alcatra
 ItemDisplay[MAP ID RARE MAPTIER=3]: %RED%%NAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>>
 ItemDisplay[MAP ID MAG MAPTIER=3]: %BLUE%%NAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>>
 ItemDisplay[MAP ID (RARE OR MAG)]: %NAME% %DGREEN% [L%ILVL%]<<MAP1W>>
-ItemDisplay[MAP !ID (RARE OR MAG)]: %NAME% [%RED%Unid%WHITE%]<<MAP1W>>
+ItemDisplay[MAP !ID (RARE OR MAG)]: %NAME% [%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP1W>>
 //ItemDisplay[ma0]: %NAME% %PURPLE%###%LIGHT_GRAY% [L%ILVL%]<<BASICHIGH>>
 //ItemDisplay[maa]: %NAME% %PURPLE%###%LIGHT_GRAY% [L%ILVL%]<<BASICHIGH>>
 //ItemDisplay[mab]: %NAME% %PURPLE%###%LIGHT_GRAY% [L%ILVL%]<<BASICHIGH>>
