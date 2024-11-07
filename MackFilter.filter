@@ -18,8 +18,8 @@
 //%BASENAME%   %FULLNAME%   %ITEMNAME%
 Attribute[Author]: mackanmusic ingame/discord/twitch
 Attribute[Name]: MackFilter
-Attribute[Version]: 4.42
-Attribute[Date]: 2024/09/09 18:25 CEST
+Attribute[Version]: 4.43
+Attribute[Date]: 2024/11/07 04:00 CET
 Option[IgnoreMissingSounds]: True
 //Rename Filterlevel 
 FilterLevel[1]: Normal 
@@ -43,6 +43,7 @@ ItemStyle[BASICHIGH]: NotificationPriority = HIGH, NotificationColor = ITEM, Bor
 ItemStyle[BASICHIGH1]: MapIcon = 3, MapIconColor = 0, NotificationColor = ITEM, NotificationPriority = HIGH, BorderColor = 4, BorderSize = 2, BackgroundColor = 15
 ItemStyle[BASIC1]: BorderColor = 4, BorderSize = 2, BackgroundColor = 138
 ItemStyle[BASICNOT]: NotificationPriority = HIGH, NotificationColor = ITEM, BorderColor = 4, BorderSize = 2, BackgroundColor = 138
+ItemStyle[MAPCOW]: MapIcon = 14, BorderColor = 32, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 113, NotificationPriority = HIGH, NotificationSoundPriority = MEDIUM, NotificationSound = "@local\sfx\common\sorceress\sor_needkey"
 ItemStyle[MAP1W]: MapIcon = 14, BorderColor = 32, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 19, NotificationPriority = HIGH, NotificationSoundPriority = MEDIUM, NotificationSound = "@local\sfx\common\barbarian\bar_needkey"
 ItemStyle[MAP2Y]: MapIcon = 15, BorderColor = 168, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 16, NotificationPriority = HIGH, NotificationSoundPriority = MEDIUM, NotificationSound = "@local\sfx\common\paladin\pal_needkey"
 ItemStyle[MAP3R]: MapIcon = 13, BorderColor = 98, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 41, NotificationPriority = HIGH, NotificationSoundPriority = MEDIUM, NotificationSound = "@local\sfx\common\assassin\ass_needkey"
@@ -86,40 +87,45 @@ ItemDisplay[fed]: %GOLD%Destruction %GREEN%[Baal]<<BASICHIGH>>
 ItemDisplay[toa]: %GOLD%Token of Absolution %PURPLE%###<<BASICNOT>>
 //PoD Items 
 ItemDisplay[cx5]: %NL%%GREEN%ôô %PURPLE%Orb %ORANGE%of %PURPLE%Corruption %GREEN%ôô%NL%%GOLD%<<OOC>>
-ItemDisplay[cx6]: %PURPLE%##%ORANGE%%NAME%%PURPLE%##<<BASICHIGH1>>
-ItemDisplay[cx7]: %PURPLE%##%ORANGE%%NAME%%PURPLE%##<<BASICHIGH1>>
-ItemDisplay[cx8]: %PURPLE%Orb %ORANGE%of %PURPLE%Enchantment<<BASICNOT>>
-ItemDisplay[cx9]: %PURPLE%##%ORANGE%%NAME%%PURPLE%##<<BASICHIGH1>>
-ItemDisplay[(ma10 OR ma5) RARE !ID]: %WHITE%## %TAN%%NAME% T1 %WHITE%## [%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP1W>> //Icy Cavern or Pleasant Pastures + Frigid Plateau
-ItemDisplay[(ma2 OR ma6 OR ma7) RARE !ID]: %RED%###### %TAN%%NAME% T3 %RED%###### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP3R>> //Forgotten Desert + Ruined Citadel + Burnt Forest
-ItemDisplay[(ma9 OR ma4 OR ma8) RARE !ID]: %YELLOW%#### %TAN%%NAME% T2 %YELLOW%#### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP2Y>> //Dim Cellar + Musty Crypt + Desecrated Temple
-ItemDisplay[(ma10 OR ma5) RARE ID]: %WHITE%%NAME% %CORAL%T1 %WHITE%## %DGREEN% [L%ILVL%]<<MAP1W>> //Icy Cavern + Frigid Plateau
-ItemDisplay[ma7 RARE ID]: %RED%Burnt Pizza%NL%%TAN%%ITEMNAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>> //Burnt Forest
-ItemDisplay[(ma2 OR ma6) RARE ID]: %RED%%NAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>> //Forgotten Desert + Ruined Citadel
-ItemDisplay[ma8 RARE ID]: %YELLOW%Musty Beauty%NL%%ITEMNAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>> //Musty Crypt
-ItemDisplay[(ma9 OR ma4) RARE ID]: %YELLOW%%NAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>> //Dim Cellar + Desecrated Temple
-ItemDisplay[(ma10 OR ma5) MAG !ID]: %WHITE%## %BLUE%%NAME% T1 %WHITE%## [%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP1W>> //Icy Cavern or Pleasant Pastures + Frigid Plateau
-ItemDisplay[(ma2 OR ma6 OR ma7) MAG !ID]: %RED%###### %BLUE%%NAME% T3 %RED%###### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP3R>> //Forgotten Desert + Ruined Citadel + Burnt Forest
-ItemDisplay[(ma9 OR ma4 OR ma8) MAG !ID]: %YELLOW%#### %BLUE%%NAME% T2 %YELLOW%#### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP2Y>> //Dim Cellar + Musty Crypt + Desecrated Temple
-ItemDisplay[(ma10 OR ma5) MAG ID]: %BLUE%%NAME% %CORAL%T1 %WHITE%## %DGREEN% [L%ILVL%]<<MAP1W>> //Icy Cavern or Pleasant Pastures + Frigid Plateau
-ItemDisplay[(ma2 OR ma6 OR ma7) MAG ID]: %BLUE%%NAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>> //Forgotten Desert + Ruined Citadel + Burnt Forest
-ItemDisplay[(ma9 OR ma4 OR ma8) MAG ID]: %BLUE%%NAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>> //Dim Cellar + Musty Crypt + Desecrated Temple
-ItemDisplay[(maz OR ma1 OR ma2 OR ma3 OR ma4 OR ma5 OR ma6 OR ma7 OR ma8 OR ma9 OR ma10 OR ma11)]: %NAME% %!MAP!%<<BASICHIGH>>
-ItemDisplay[MAP !ID MAG MAPTIER=2]: %YELLOW%#### %BLUE%%NAME% T2 %YELLOW%#### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP2Y>>
+ItemDisplay[(cx6 OR cx7)]: %PURPLE%##%ORANGE%%NAME%%PURPLE%##<<BASICHIGH1>>
+ItemDisplay[cx8]: %PURPLE%Orb %ORANGE%of %PURPLE%Enchantment<<BASICNOT>> //Doesnt exist anymore
+ItemDisplay[cx9]: %GREEN%Map Reroll%NL%%PURPLE%## %ORANGE%Orb Of Alteration%PURPLE% ##{%PURPLE%(%WHITE%Reroll a map into a differant map in same tier%PURPLE%)}<<BASICHIGH1>>
+//Maps
+ItemDisplay[MAP !ID RARE MAPTIER=1]: %WHITE%## %TAN%%NAME% T1 %WHITE%## [%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP1W>> 
+ItemDisplay[MAP !ID MAG MAPTIER=1]: %WHITE%## %BLUE%%NAME% T1 %WHITE%## [%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP1W>>
 ItemDisplay[MAP !ID RARE MAPTIER=2]: %YELLOW%#### %TAN%%NAME% T2 %YELLOW%#### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP2Y>>
+ItemDisplay[MAP !ID MAG MAPTIER=2]: %YELLOW%#### %BLUE%%NAME% T2 %YELLOW%#### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP2Y>>
+ItemDisplay[MAP !ID RARE MAPTIER=3]: %RED%##### %TAN%%NAME% T3 %RED%##### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP3R>>
 ItemDisplay[MAP !ID MAG MAPTIER=3]: %RED%###### %BLUE%%NAME% T3 %RED%###### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP3R>>
-ItemDisplay[MAP !ID RARE MAPTIER=3]: %YELLOW%#### %TAN%%NAME% T3 %RED%#### %WHITE%[%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP3R>>
+ItemDisplay[MAP ID "Pleasant Pasture Relic"]: %GREEN%Cow Map Relic%NL%%CORAL%T1 %GREEN%## {%GREEN%Pleasant Pasture Relic}<<MAPCOW>>
+ItemDisplay[MAP ID RARE "Baleful Alcazar Relic"]: %WHITE%Jailful Alcatraz Relic%NL%%CORAL%T1 %WHITE%## %DGREEN% [L%ILVL%]{%GREEN%Baleful Alcazar Relic}<<MAP1W>>
+ItemDisplay[MAP ID MAG "Baleful Alcazar Relic"]: %BLUE%Jailful Alcatraz %WHITE%Relic%NL%%CORAL%T1 %WHITE%## %DGREEN% [L%ILVL%]{%GREEN%Baleful Alcazar Relic}<<MAP1W>>
+ItemDisplay[MAP ID RARE "Decomposing Settlement Relic"]: %WHITE%Decomposing Settlement Relic%NL%%CORAL%T1 %WHITE%## %DGREEN% [L%ILVL%]{%GREEN%Decomposing Settlement Relic}<<MAP1W>>
+ItemDisplay[MAP ID MAG "Decomposing Settlement Relic"]: %BLUE%Decomposing Settlement %WHITE%Relic%NL%%CORAL%T1 %WHITE%## %DGREEN% [L%ILVL%]{%GREEN%Decomposing Settlement Relic}<<MAP1W>>
+ItemDisplay[MAP ID RARE "Dim Cellar Relic"]: %YELLOW%Dim Cellar Relic%NL%%CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]{%GREEN%Dim Cellar Relic}<<MAP2Y>>
+ItemDisplay[MAP ID MAG "Dim Cellar Relic"]: %BLUE%Dim Cellar %YELLOW%Relic%NL%%CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]{%GREEN%Dim Cellar Relic}<<MAP2Y>>
+ItemDisplay[MAP ID RARE "Icy Cavern Relic"]: %YELLOW%Icy Cavern Relic%NL%%CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]{%GREEN%Icy Cavern Relic}<<MAP2Y>>
+ItemDisplay[MAP ID MAG "Icy Cavern Relic"]: %BLUE%Icy Cavern %YELLOW%Relic%NL%%CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]{%GREEN%Icy Cavern Relic}<<MAP2Y>>
+ItemDisplay[MAP ID RARE "Desecrated Temple Relic"]: %YELLOW%Desecrated Temple Relic%NL%%CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]{%GREEN%Desecrated Temple Relic}<<MAP2Y>>
+ItemDisplay[MAP ID MAG "Desecrated Temple Relic"]: %BLUE%Desecrated Temple %YELLOW%Relic%NL%%CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]{%GREEN%Desecrated Temple Relic}<<MAP2Y>>
+ItemDisplay[MAP ID RARE ma14]: %YELLOW%Abyssal Furnace Relic%NL%%CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]{%GREEN%Abyssal Furnace Relic}<<MAP2Y>>
+ItemDisplay[MAP ID MAG ma14]: %BLUE%Abyssal Furnace %YELLOW%Relic%NL%%CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]{%GREEN%Abyssal Furnace Relic}<<MAP2Y>>
+ItemDisplay[MAP ID RARE "Musty Crypt Relic"]: %RED%Musty Beauty Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Musty Crypt Relic}<<MAP3R>>
+ItemDisplay[MAP ID MAG "Musty Crypt Relic"]: %BLUE%Musty Beauty %RED%Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Musty Crypt Relic}<<MAP3R>>
+ItemDisplay[MAP ID RARE "Frigid Plateau Relic"]: %RED%Frigid Plateau Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Frigid Plateau Relic}<<MAP3R>>
+ItemDisplay[MAP ID MAG "Frigid Plateau Relic"]: %BLUE%Fridgid Plateau %RED%Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Frigid Plateau Relic}<<MAP3R>>
+ItemDisplay[MAP ID RARE "Ruined Citadel Relic"]: %RED%Ruined RIPadel Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Ruined Citadel Relic}<<MAP3R>>
+ItemDisplay[MAP ID MAG "Ruined Citadel Relic"]: %BLUE%Ruined RIPadel %RED%Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Ruined Citadel Relic}<<MAP3R>>
+ItemDisplay[MAP ID RARE "Forgotten Desert Relic"]: %RED%Forgotten Desert Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Forgotten Desert Relic}<<MAP3R>>
+ItemDisplay[MAP ID MAG "Forgotten Desert Relic"]: %BLUE%Forgotten Desert %RED%Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Forgotten Desert Relic}<<MAP3R>>
+ItemDisplay[MAP ID RARE "Burnt Forest Relic"]: %RED%Burnt Pizza Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Burnt Forest Relic}<<MAP3R>>
+ItemDisplay[MAP ID MAG "Burnt Forest Relic"]: %BLUE%Burnt Pizza %RED%Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Burnt Forest Relic}<<MAP3R>>
+ItemDisplay[MAP ID MAG MAPTIER=1]: %BLUE%%NAME% %CORAL%T1 %WHITE%## %DGREEN% [L%ILVL%]<<MAP1W>> 
+ItemDisplay[MAP ID RARE MAPTIER=1]: %WHITE%%NAME% %CORAL%T1 %WHITE%## %DGREEN% [L%ILVL%]<<MAP1W>>
 ItemDisplay[MAP ID MAG MAPTIER=2]: %BLUE%%NAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>>
 ItemDisplay[MAP ID RARE MAPTIER=2]: %YELLOW%%NAME% %CORAL%T2 %YELLOW%#### %DGREEN% [L%ILVL%]<<MAP2Y>>
-ItemDisplay[MAP ID MAG MAPTIER=3 "Baleful Alcazar Relic"]: %RED%Jailful Alcatraz Relic%NL%%BLUE%%ITEMNAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Baleful Alcazar Relic%NL%%ORANGE%Gulag}<<MAP3R>>
-ItemDisplay[MAP ID RARE MAPTIER=3 "Baleful Alcazar Relic"]: %RED%Jailful Alcatraz Relic%NL%%TAN%%ITEMNAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%GREEN%Baleful Alcazar Relic%NL%%ORANGE%Gulag}<<MAP3R>>
 ItemDisplay[MAP ID RARE MAPTIER=3]: %RED%%NAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>>
 ItemDisplay[MAP ID MAG MAPTIER=3]: %BLUE%%NAME% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]<<MAP3R>>
-ItemDisplay[MAP ID (RARE OR MAG)]: %NAME% %DGREEN% [L%ILVL%]<<MAP1W>>
-ItemDisplay[MAP !ID (RARE OR MAG)]: %NAME% [%RED%Unid%WHITE%]%DGREEN% [L%ILVL%]<<MAP1W>>
-//ItemDisplay[ma0]: %NAME% %PURPLE%###%LIGHT_GRAY% [L%ILVL%]<<BASICHIGH>>
-//ItemDisplay[maa]: %NAME% %PURPLE%###%LIGHT_GRAY% [L%ILVL%]<<BASICHIGH>>
-//ItemDisplay[mab]: %NAME% %PURPLE%###%LIGHT_GRAY% [L%ILVL%]<<BASICHIGH>>
 //Wirt's Leg
 ItemDisplay[leg ILVL>60]: %ORANGE% %NAME% %WHITE%(%RED%HELL%WHITE%)<:BASIC: NotificationSound = "@local\sfx\common\cain\cain_stayandlisten", NotificationSoundPriority = MEDIUM>
 ItemDisplay[leg ILVL<30]: %ORANGE% %NAME% %WHITE%(%DGREEN%NORM%WHITE%)<:BASIC: NotificationSound = "@local\sfx\common\cain\cain_stayandlisten", NotificationSoundPriority = MEDIUM>
