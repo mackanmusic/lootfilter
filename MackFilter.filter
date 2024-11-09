@@ -18,13 +18,13 @@
 //%BASENAME%   %FULLNAME%   %ITEMNAME%
 Attribute[Author]: mackanmusic ingame/discord/twitch
 Attribute[Name]: MackFilter
-Attribute[Version]: 4.44
-Attribute[Date]: 2024/11/07 04:44 CET
+Attribute[Version]: 4.45
+Attribute[Date]: 2024/11/09 05:38 CET
 Option[IgnoreMissingSounds]: True
 //Rename Filterlevel 
 FilterLevel[1]: Normal 
-FilterLevel[2]: Cowmap (strict)
-FilterLevel[3]: Nothing Yet
+FilterLevel[2]: Cowmap (Strict)
+FilterLevel[3]: Science (Elites)
 Option[DefaultFilterLevel]: Normal
 Option[DefaultNotifyLevel]: LOW
 TextMacro[ALLRES]: %WHITE%%RES%%YELLOW%a%RED%l%BLUE%l%YELLOW%r%RED%e%BLUE%s
@@ -53,6 +53,8 @@ ItemStyle[UBERL]: MapIcon = 47, BorderColor = 132, BorderSize = 2, NotificationC
 ItemStyle[UBERI]: MapIcon = 47, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH, NotificationSoundPriority = HIGH, NotificationSound = "@local\sfx\act4\izual\izualtaunt1"
 ItemStyle[KEYS]: MapIcon = 47, BorderColor = 132, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 59, NotificationPriority = HIGH, NotificationSoundPriority = HIGH, NotificationSound = "@local\sfx\common\barbarian\bar_impossible"
 ItemStyle[GG]: MapIcon = 26, BorderColor = 155, BorderSize = 2, NotificationColor = ITEM, BackgroundColor = 35, NotificationPriority = HIGH, NotificationSoundPriority = MEDIUM
+ItemStyle[CHAMPS]: MapIcon = 1
+ItemStyle[ELITES]: MapIcon = 5
 //
 //%!ALLRES!% 
 //%!RUNESEND!%
@@ -60,6 +62,11 @@ ItemStyle[GG]: MapIcon = 26, BorderColor = 155, BorderSize = 2, NotificationColo
 //%!MAP!%
 //%!STARS!%
 //%!STARS2!%
+//
+//Map Elites Spawns. ONLY for Science
+ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) FILTERLVL=3 !ID ((AREALVL=86 ILVL=88) OR (AREALVL=87 ILVL=89) OR (AREALVL=88 ILVL=90))]: %BLACK%.<<CHAMPS>>
+ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) FILTERLVL=3 !ID ((AREALVL=86 ILVL=89) OR (AREALVL=87 ILVL=90) OR (AREALVL=88 ILVL=91))]: %BLACK%.<<ELITES>>
+ItemDisplay[FILTERLVL=3]:
 //Basics	%BOLD% %CORAL% %LIGHT_GRAY%
 //Hide Gold Piles Smaller Than (<) X
 ItemDisplay[GOLD<5000]:
@@ -116,11 +123,11 @@ ItemDisplay[MAP ID MAG ma14]: %BLUE%Abyssal Furnace %YELLOW%Relic%NL%%CORAL%T2 %
 ItemDisplay[MAP ID RARE "Musty Crypt Relic"]: %RED%Musty Beauty Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%PURPLE%Immunes: %BLUE%2 Cold (124+118)%WHITE%, %RED%1 Fire (121)%WHITE%, %YELLOW%1 Light (125)%WHITE%, %DGREEN%1 Poison (115)%NL%%GREEN%Musty Crypt Relic}<<MAP3R>>
 ItemDisplay[MAP ID MAG "Musty Crypt Relic"]: %BLUE%Musty Beauty %RED%Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%PURPLE%Immunes: %BLUE%2 Cold (124+118)%WHITE%, %RED%1 Fire (121)%WHITE%, %YELLOW%1 Light (125)%WHITE%, %DGREEN%1 Poison (115)%NL%%GREEN%Musty Crypt Relic}<<MAP3R>>
 ItemDisplay[MAP ID RARE "Frigid Plateau Relic"]: %RED%Frigid Plateau Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%PURPLE%Immunes: %RED%2 Fire (131+120)%WHITE%, %LIGHT_GRAY%1 Phys (125)%WHITE%, %DGREEN%2 Poison (100+134)%NL%%GREEN%Frigid Plateau Relic}<<MAP3R>>
-ItemDisplay[MAP ID MAG "Frigid Plateau Relic"]: %BLUE%Fridgid Plateau %RED%Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%PURPLE%Immunes: %RED%2 Fire (131+120)%WHITE%, %LIGHT_GRAY%1 Phys (125)%WHITE%, %DGREEN%2 Poison (100+134)%NL%%GREEN%Frigid Plateau Relic}<<MAP3R>>
+ItemDisplay[MAP ID MAG "Frigid Plateau Relic"]: %BLUE%Frigid Plateau %RED%Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%PURPLE%Immunes: %RED%2 Fire (131+120)%WHITE%, %LIGHT_GRAY%1 Phys (125)%WHITE%, %DGREEN%2 Poison (100+134)%NL%%GREEN%Frigid Plateau Relic}<<MAP3R>>
 ItemDisplay[MAP ID RARE "Ruined Citadel Relic"]: %RED%Ruined RIPadel Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%PURPLE%Immunes: %BLUE%2 Cold (117+127)%WHITE%, %RED%1 Fire (118)%WHITE%, %YELLOW%1 Light (118)%WHITE%, %LIGHT_GRAY%1 Phys (100)%NL%%GREEN%Ruined Citadel Relic}<<MAP3R>>
 ItemDisplay[MAP ID MAG "Ruined Citadel Relic"]: %BLUE%Ruined RIPadel %RED%Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%PURPLE%Immunes: %BLUE%2 Cold (117+127)%WHITE%, %RED%1 Fire (118)%WHITE%, %YELLOW%1 Light (118)%WHITE%, %LIGHT_GRAY%1 Phys (100)%NL%%GREEN%Ruined Citadel Relic}<<MAP3R>>
-ItemDisplay[MAP ID RARE "Forgotten Desert Relic"]: %RED%Forgotten Desert Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%PURPLE%Immunes: %BLUE%1 Cold (130)%WHITE%, %YELLOW%2 Light (136+122)%WHITE%, %PURPLE%1 Magic (100)%WHITE%, %LIGHT_GRAY%1 Phys (103)%NL%%GREEN%Forgotten Desert Relic}<<MAP3R>>
-ItemDisplay[MAP ID MAG "Forgotten Desert Relic"]: %BLUE%Forgotten Desert %RED%Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%PURPLE%Immunes: %BLUE%1 Cold (130)%WHITE%, %YELLOW%2 Light (136+122)%WHITE%, %PURPLE%1 Magic (100)%WHITE%, %LIGHT_GRAY%1 Phys (103)%NL%%GREEN%Forgotten Desert Relic}<<MAP3R>>
+ItemDisplay[MAP ID RARE "Forgotten Desert Relic"]: %RED%Wendys Drive Thru Desert Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%PURPLE%Immunes: %BLUE%1 Cold (130)%WHITE%, %YELLOW%2 Light (136+122)%WHITE%, %PURPLE%1 Magic (100)%WHITE%, %LIGHT_GRAY%1 Phys (103)%NL%%GREEN%Forgotten Desert Relic}<<MAP3R>>
+ItemDisplay[MAP ID MAG "Forgotten Desert Relic"]: %BLUE%Wendys Drive Thru Desert %RED%Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%PURPLE%Immunes: %BLUE%1 Cold (130)%WHITE%, %YELLOW%2 Light (136+122)%WHITE%, %PURPLE%1 Magic (100)%WHITE%, %LIGHT_GRAY%1 Phys (103)%NL%%GREEN%Forgotten Desert Relic}<<MAP3R>>
 ItemDisplay[MAP ID RARE "Burnt Forest Relic"]: %RED%Burnt Pizza Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%PURPLE%Immunes: %RED%1 Fire (119)%WHITE%, %YELLOW%1 Light (117)%WHITE%, %PURPLE%1 Magic (100)%WHITE%, %DGREEN%2 Poison (105+102)%NL%%GREEN%Burnt Forest Relic}<<MAP3R>>
 ItemDisplay[MAP ID MAG "Burnt Forest Relic"]: %BLUE%Burnt Pizza %RED%Relic%NL% %CORAL%T3 %RED%###### %DGREEN% [L%ILVL%]{%PURPLE%Immunes: %RED%1 Fire (119)%WHITE%, %YELLOW%1 Light (117)%WHITE%, %PURPLE%1 Magic (100)%WHITE%, %DGREEN%2 Poison (105+102)%NL%%GREEN%Burnt Forest Relic}<<MAP3R>>
 ItemDisplay[MAP ID MAG MAPTIER=1]: %BLUE%%NAME% %CORAL%T1 %WHITE%## %DGREEN% [L%ILVL%]<<MAP1W>> 
