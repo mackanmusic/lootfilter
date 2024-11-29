@@ -19,13 +19,14 @@
 //%BASENAME%   %FULLNAME%   %ITEMNAME%
 Attribute[Author]: mackanmusic ingame/discord/twitch
 Attribute[Name]: MackFilter
-Attribute[Version]: 4.48
-Attribute[Date]: 2024/11/15 19:52 CET
+Attribute[Version]: 4.50
+Attribute[Date]: 2024/11/29 06:14 CET
 Option[IgnoreMissingSounds]: True
 //Rename Filterlevel 
 FilterLevel[1]: Normal 
 FilterLevel[2]: Cowmap (Strict)
 FilterLevel[3]: Science (Elites)
+FilterLevel[4]: In the works
 Option[DefaultFilterLevel]: Normal
 Option[DefaultNotifyLevel]: LOW
 TextMacro[ALLRES]: %WHITE%%RES%%YELLOW%a%RED%l%BLUE%l%YELLOW%r%RED%e%BLUE%s
@@ -196,7 +197,7 @@ ItemDisplay[r05 FILTERLVL=2]: %TAN% Eth Rune %LIGHT_GRAY%[5]<<BASIC>>
 ItemDisplay[r06 FILTERLVL=2]: %TAN% Ith Rune %LIGHT_GRAY%[6]<<BASIC>>
 ItemDisplay[r07 FILTERLVL=2]: %TAN% Tal Rune %LIGHT_GRAY%[7]<<BASIC>>
 ItemDisplay[r08 FILTERLVL=2]: %TAN% Ral Rune %LIGHT_GRAY%[8] %GREEN%**<<BASIC>>
-ItemDisplay[r09 FILTERLVL=2]: %TAN% Ort Rune %LIGHT_GRAY%[9]<<BASIC>>
+ItemDisplay[r09 FILTERLVL=2]: %TAN% Ort Rune %LIGHT_GRAY%[9] %GREEN%*<<BASIC>>
 ItemDisplay[r10 FILTERLVL=2]: %TAN% Thul Rune %LIGHT_GRAY%[10]<<BASIC>>
 ItemDisplay[r11 FILTERLVL=2]: %TAN% Amn Rune %LIGHT_GRAY%[11]<<BASIC>>
 ItemDisplay[r12 FILTERLVL=2]: %TAN% Sol Rune %LIGHT_GRAY%[12]<<BASIC>>
@@ -325,7 +326,7 @@ ItemDisplay[glg]: %ORANGE%Emerald %ORANGE%[%GREEN%@%ORANGE%]<<BASIC>>
 ItemDisplay[glr]: %ORANGE%Ruby %ORANGE%[%RED%@%ORANGE%]<<BASIC>>
 ItemDisplay[glb]: %ORANGE%Sapphire %ORANGE%[%BLUE%@%ORANGE%]<<BASIC>>
 ItemDisplay[gly]: %ORANGE%Topaz %ORANGE%[%YELLOW%@%ORANGE%]<<BASIC>>
-ItemDisplay[skl]: %NL%%ORANGE%Skull %ORANGE%[%LIGHT_GRAY%@%ORANGE%] %PURPLE%%%GREEN%%%GOLD%%%YELLOW%%%PURPLE%%<<BASIC>>
+ItemDisplay[skl]: %NL%%ORANGE%Skull %ORANGE%[%LIGHT_GRAY%@%ORANGE%] %PURPLE%%%GREEN%%%GOLD%%%YELLOW%%%PURPLE%%<:BASIC: MapIcon = 35, NotificationPriority = MEDIUM, NotificationColor = ITEM>
 //Gems Perfect
 ItemDisplay[gpv FILTERLVL=2]: %ORANGE%[%PURPLE%P @%ORANGE%]<<BASIC>>
 ItemDisplay[gpw FILTERLVL=2]: %ORANGE%[%WHITE%P @%ORANGE%]<<BASIC>>
@@ -1477,6 +1478,8 @@ ItemDisplay[NMAG ETH !SUP SOCK=6 (7h7 OR 7wc) FILTERLVL=2]:
 ItemDisplay[NMAG ETH !SUP SOCK=6 (7h7 OR 7wc)]: %ORANGE%ETH %WHITE%%NAME% %YELLOW%[%SOCKETS%]<<BASIC>>
 ItemDisplay[NMAG ETH SUP SOCK=0 ED>0 (7h7 OR 7wc)]: %ORANGE%ETH %WHITE%%NAME%  %WHITE%(%ORANGE%%EDAMAGE% ED%WHITE%){%ORANGE%Larzuk 6os}<<BASIC>>
 ItemDisplay[NMAG ETH SUP SOCK=6 ED>0 (7h7 OR 7wc)]: %ORANGE%ETH %WHITE%%NAME% %YELLOW%[%SOCKETS%] %WHITE%(%ORANGE%%EDAMAGE% ED%WHITE%){%PURPLE%Silence: %WHITE%Dol %SAGE%+ %LIGHT_GRAY%Eld %SAGE%+ %WHITE%Hel %SAGE%+ %LIGHT_GRAY%Ist %SAGE%+ %WHITE%Tir %SAGE%+ %LIGHT_GRAY%Vex}<<BASIC>>
+ItemDisplay[NMAG !ETH SUP SOCK=0 7gd !FILTERLVL=2]: %WHITE%%NAME% <<BASIC>>
+ItemDisplay[NMAG !ETH SUP SOCK=6 7gd !FILTERLVL=2]: %WHITE%%NAME% %YELLOW%[%SOCKETS%]<<BASIC>>
 ItemDisplay[NMAG !ETH SOCK=6 (7h7 OR 7wc)]:
 ItemDisplay[NMAG ETH (7pa OR 7vo)]:
 ItemDisplay[NMAG !ETH (WP8 OR spr OR 9sr OR 7sr OR tri OR 9tr OR 7tr OR brn OR 9br OR 7br OR spt OR 9st OR 7st OR pik OR 9p9 OR 7p7 OR 7gm OR 7fb OR 7gd OR 7pa OR 7vo)]:
@@ -1708,6 +1711,7 @@ ItemDisplay[MAG CL4 !ID]:
 //Magic Vendor (Staff, Wand, Scepter)
 ItemDisplay[MAG (WP11 OR WP12 OR WP13) !ID]:
 //Magic Maybe (Druid Pelt, Elite Assassin Claws, Sorceress Orbs
+ItemDisplay[MAG CL1 !ID !FILTERLVL=2]: %NAME%<<BASIC>>
 ItemDisplay[MAG (CL1 OR (ob1 OR ob2 OR ob3 OR ob4 OR ob5 OR ob6 OR ob7 OR ob8 OR ob9 OR oba OR obb OR obc OR obd OR obe OR obf)) !ID]:
 ItemDisplay[MAG ELT CL5 !ID]:
 //Magic Amazon Weapons >ILVL55
@@ -1867,12 +1871,12 @@ ItemDisplay[NMAG (ob1 OR ob2 OR ob3 OR ob4 OR ob5 OR ob6 OR ob7 OR ob8 OR ob9 OR
 //Catchall
 ItemDisplay[(RARE OR MAG OR CRAFT) !ETH ID]: %NAME%<<BASIC>>
 ItemDisplay[RARE ETH]: %ORANGE%ETH %YELLOW%%NAME%<<BASIC>>
-ItemDisplay[MAG ETH ILVL<86]: %ORANGE%ETH %BLUE%%NAME%<<BASIC>>
+ItemDisplay[MAG ETH ILVL<80]: %ORANGE%ETH %BLUE%%NAME%<<BASIC>>
 ItemDisplay[CRAFT ETH ID]: %ORANGE%ETH %NAME%<<BASIC>>
 ItemDisplay[ETH NMAG SOCK>0]: %ORANGE%ETH %GRAY%%NAME% [%SOCKETS%]<<BASIC>>
 ItemDisplay[ETH NMAG SOCK=0]: %ORANGE%ETH %GRAY%%NAME%<<BASIC>>
-ItemDisplay[ETH SOCK>0]: %ORANGE%ETH %NAME% [%SOCKETS%]<<BASIC>>
-ItemDisplay[ETH SOCK=0]: %ORANGE%ETH %NAME%<<BASIC>>
+ItemDisplay[ETH SOCK>0 ID]: %NAME% [%SOCKETS%]%ORANGE%ETH <<BASIC>>
+ItemDisplay[ETH SOCK=0 ID]: %NAME%%ORANGE%ETH <<BASIC>>
 ItemDisplay[SOCK>0]: %NAME% [%SOCKETS%]<<BASIC>>
 //ItemDisplay[tsc]: %GREEN%!%WHITE%TP
 ItemDisplay[tsc CLVL<41]: %GREEN%!%WHITE%TP<<BASIC>>
