@@ -19,8 +19,8 @@
 //%BASENAME%   %FULLNAME%   %ITEMNAME%
 Attribute[Author]: mackanmusic ingame/discord/twitch
 Attribute[Name]: MackFilter
-Attribute[Version]: 4.50
-Attribute[Date]: 2024/11/29 06:14 CET
+Attribute[Version]: 4.51
+Attribute[Date]: 2024/11/30 07:14 CET
 Option[IgnoreMissingSounds]: True
 //Rename Filterlevel 
 FilterLevel[1]: Normal 
@@ -197,9 +197,9 @@ ItemDisplay[r05 FILTERLVL=2]: %TAN% Eth Rune %LIGHT_GRAY%[5]<<BASIC>>
 ItemDisplay[r06 FILTERLVL=2]: %TAN% Ith Rune %LIGHT_GRAY%[6]<<BASIC>>
 ItemDisplay[r07 FILTERLVL=2]: %TAN% Tal Rune %LIGHT_GRAY%[7]<<BASIC>>
 ItemDisplay[r08 FILTERLVL=2]: %TAN% Ral Rune %LIGHT_GRAY%[8] %GREEN%**<<BASIC>>
-ItemDisplay[r09 FILTERLVL=2]: %TAN% Ort Rune %LIGHT_GRAY%[9] %GREEN%*<<BASIC>>
+ItemDisplay[r09 FILTERLVL=2]: %TAN% Ort Rune %LIGHT_GRAY%[9]<<BASIC>>
 ItemDisplay[r10 FILTERLVL=2]: %TAN% Thul Rune %LIGHT_GRAY%[10]<<BASIC>>
-ItemDisplay[r11 FILTERLVL=2]: %TAN% Amn Rune %LIGHT_GRAY%[11]<<BASIC>>
+ItemDisplay[r11 FILTERLVL=2]: %TAN% Amn Rune %LIGHT_GRAY%[11] %PINK%*<<BASIC>>
 ItemDisplay[r12 FILTERLVL=2]: %TAN% Sol Rune %LIGHT_GRAY%[12]<<BASIC>>
 ItemDisplay[r13 FILTERLVL=2]: %TAN% Shael Rune %LIGHT_GRAY%[13]<<BASIC>>
 ItemDisplay[r14 FILTERLVL=2]: %TAN% Dol Rune %LIGHT_GRAY%[14]<<BASIC>>
@@ -213,7 +213,7 @@ ItemDisplay[r07]: %TAN% Tal Rune %LIGHT_GRAY%[7]<<BASICLOW>>
 ItemDisplay[r08]: %TAN% Ral Rune %LIGHT_GRAY%[8] %GREEN%**<<BASICLOW>>
 ItemDisplay[r09]: %TAN% Ort Rune %LIGHT_GRAY%[9]<<BASICLOW>>
 ItemDisplay[r10]: %TAN% Thul Rune %LIGHT_GRAY%[10]<<BASICLOW>>
-ItemDisplay[r11]: %TAN% Amn Rune %LIGHT_GRAY%[11]<<BASICLOW>>
+ItemDisplay[r11]: %TAN% Amn Rune %LIGHT_GRAY%[11] %PINK%*<<BASICLOW>>
 ItemDisplay[r12]: %TAN% Sol Rune %LIGHT_GRAY%[12]<<BASICLOW>>
 ItemDisplay[r13]: %TAN% Shael Rune %LIGHT_GRAY%[13]<<BASICLOW>>
 ItemDisplay[r14]: %TAN% Dol Rune %LIGHT_GRAY%[14]<<BASICLOW>>
@@ -1059,6 +1059,7 @@ ItemDisplay[NMAG !RW WP13 !SK117>0 SOCK=4]: %NAME% %DGREEN%[%SOCKETS%] {%RED%Hol
 //Rings Amulets Jewels Charms
 ItemDisplay[UNI !ID rin]: %!STARS!%%NL%       %GOLD%%NAME%       %NL%%!STARS1!%<<GG>>
 ItemDisplay[UNI !ID amu]: %!STARS!%%NL%       %GOLD%%NAME%       %NL%%!STARS1!%<<GG>>
+ItemDisplay[UNIQUE("Nature's Peace")]: %BASENAME%%NL%Nature's Piss<<GG>>
 ItemDisplay[UNI ID rin FCR>0]: %NAME% {%ORANGE%FCR%WHITE%}<<GG>>
 ItemDisplay[UNI ID rin STAT36>0]: %NAME% {%ORANGE%PDR%WHITE%}<<GG>>
 ItemDisplay[UNI ID rin STAT96>8]: %NAME% {%ORANGE%FRW%WHITE%}<<GG>>
@@ -1319,6 +1320,7 @@ ItemDisplay[RARE !ETH (ci0 OR ci1) ID]: %NAME% %WHITE%(%CORAL%Up before slam%WHI
 ItemDisplay[MAG !ETH 7cr ID STAT218=4 STAT224=33 IAS>39 SOCK=0]: %NAME% %WHITE%(%ORANGE%FOOL'S %WHITE%, %ORANGE%40 IAS%WHITE%)%PURPLE%*%ORANGE%*%GREEN%*%GOLD%*%YELLOW%*%PURPLE%*{%SAGE%-----------------------%NL%%ORANGE%Message %PINK%*mackanmusic %NL% %GREEN% BUYING %PINK%Clean%WHITE% \ %RED%6os%NL%%SAGE%-----------------------}<<BASICHIGH1>>
 ItemDisplay[MAG !ETH 7cr ID TABSK24>2 IAS>39 SOCK=0]: %NAME% %WHITE%(%ORANGE%Off Aura %WHITE%, %ORANGE%40 IAS%WHITE%)%PURPLE%*%ORANGE%*%GREEN%*%GOLD%*%YELLOW%*%PURPLE%*{%SAGE%-----------------------%NL%%ORANGE%Message %PINK%*mackanmusic %NL% %GREEN% BUYING %PINK%Clean%WHITE% \ %RED%6os%NL%%SAGE%-----------------------}<<BASICHIGH1>>
 ItemDisplay[MAG !ETH 7cr ID STAT218=4 STAT224=33 IAS>39 SOCK>4]: %NAME% %PURPLE%[%SOCKETS%] %WHITE%(%ORANGE%FOOL'S %WHITE%, %ORANGE%40 IAS%WHITE%)%PURPLE%*%ORANGE%*%GREEN%*%GOLD%*%YELLOW%*%PURPLE%*{%SAGE%-----------------------%NL%%ORANGE%Message %PINK%*mackanmusic %NL% %GREEN% BUYING %NL%%SAGE%-----------------------}<<BASICHIGH1>>
+ItemDisplay[MAG CL1 !ID !FILTERLVL=2]: %NAME%<<BASIC>>
 //BASES
 //Armor
 //Armor
@@ -1711,7 +1713,6 @@ ItemDisplay[MAG CL4 !ID]:
 //Magic Vendor (Staff, Wand, Scepter)
 ItemDisplay[MAG (WP11 OR WP12 OR WP13) !ID]:
 //Magic Maybe (Druid Pelt, Elite Assassin Claws, Sorceress Orbs
-ItemDisplay[MAG CL1 !ID !FILTERLVL=2]: %NAME%<<BASIC>>
 ItemDisplay[MAG (CL1 OR (ob1 OR ob2 OR ob3 OR ob4 OR ob5 OR ob6 OR ob7 OR ob8 OR ob9 OR oba OR obb OR obc OR obd OR obe OR obf)) !ID]:
 ItemDisplay[MAG ELT CL5 !ID]:
 //Magic Amazon Weapons >ILVL55
