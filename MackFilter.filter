@@ -19,8 +19,8 @@
 //%BASENAME%   %FULLNAME%   %ITEMNAME%
 Attribute[Author]: mackanmusic ingame/discord/twitch
 Attribute[Name]: MackFilter
-Attribute[Version]: 4.53
-Attribute[Date]: 2024/12/04 04:44 CET
+Attribute[Version]: 4.54
+Attribute[Date]: 2024/12/22 03:04 CET
 Option[IgnoreMissingSounds]: True
 //Rename Filterlevel 
 FilterLevel[1]: Normal 
@@ -1543,6 +1543,7 @@ ItemDisplay[(7gm OR 7p7) ETH SUP NMAG SOCK=6]: %PURPLE%*%ORANGE%*%PURPLE%ETH %DG
 ItemDisplay[(7gm OR 7p7) ETH SUP NMAG SOCK=0]: %PURPLE%*%ORANGE%*%PURPLE%ETH %DGREEN%%NAME% %PURPLE%*%ORANGE%*{%ORANGE%Larzuk 6os}<<BASIC>>
 ItemDisplay[6ws NMAG ETH SOCK=0]: %ORANGE%ETH %DGREEN%%NAME% <<BASIC>>
 ItemDisplay[6ws NMAG ETH SOCK=6]: %ORANGE%ETH %DGREEN%%NAME% %YELLOW%[%SOCKETS%]<<BASIC>>
+ItemDisplay[7wa NMAG ETH SOCK=4]: %ORANGE%ETH %DGREEN%%NAME% %YELLOW%[%SOCKETS%]{%PURPLE%Phoenix: %WHITE%Vex %SAGE%+ %LIGHT_GRAY%Vex %SAGE%+ %WHITE%Lo %SAGE%+ %LIGHT_GRAY%Jah}<<BASIC>>
 ItemDisplay[7wa !SUP NMAG ETH SOCK=0]: %ORANGE%ETH %DGREEN%%NAME%{%ORANGE%Larzuk 6os%NL%%PURPLE%Roll: %WHITE%Ral %SAGE%+ %LIGHT_GRAY%Amn %SAGE%+ %PURPLE%PAmethyst}<<BASIC>>
 ItemDisplay[7wa ETH SUP NMAG SOCK=0]: %ORANGE%ETH %DGREEN%%NAME%{%ORANGE%Larzuk 6os}<<BASIC>>
 ItemDisplay[7wa ETH NMAG SOCK=6]: %ORANGE%ETH %DGREEN%%NAME% %YELLOW%[%SOCKETS%]{%PURPLE%Silence: %WHITE%Dol %SAGE%+ %LIGHT_GRAY%Eld %SAGE%+ %WHITE%Hel %SAGE%+ %LIGHT_GRAY%Ist %SAGE%+ %WHITE%Tir %SAGE%+ %LIGHT_GRAY%Vex%NL%%PURPLE%Botd: %WHITE%Vex %SAGE%+ %LIGHT_GRAY%Hel %SAGE%+ %WHITE%El %SAGE%+ %LIGHT_GRAY%Eld %SAGE%+ %WHITE%Zod %SAGE%+ %LIGHT_GRAY%Eth}<<BASIC>>
